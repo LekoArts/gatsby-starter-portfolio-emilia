@@ -1,0 +1,66 @@
+{
+  "name": "gatsby-starter-portfolio-emilia",
+  "description": "Gatsby Starter Portfolio Emilia",
+  "version": "1.0.0",
+  "author": "LekoArts <hello@lekoarts.de>",
+  "bugs": {
+    "url": "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia/issues"
+  },
+  "dependencies": {
+    "date-fns": "^1.29.0",
+    "gatsby": "^1.9.165",
+    "gatsby-image": "^1.0.34",
+    "gatsby-link": "^1.6.34",
+    "gatsby-plugin-google-analytics": "^1.0.15",
+    "gatsby-plugin-lodash": "^1.0.7",
+    "gatsby-plugin-manifest": "^1.0.12",
+    "gatsby-plugin-nprogress": "^1.0.10",
+    "gatsby-plugin-offline": "^1.0.12",
+    "gatsby-plugin-react-helmet": "^2.0.3",
+    "gatsby-plugin-sharp": "^1.6.25",
+    "gatsby-plugin-sitemap": "^1.2.10",
+    "gatsby-plugin-styled-components": "^2.0.4",
+    "gatsby-plugin-typography": "^1.7.10",
+    "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-images": "^1.5.39",
+    "gatsby-source-filesystem": "^1.5.14",
+    "gatsby-transformer-remark": "^1.7.29",
+    "gatsby-transformer-sharp": "^1.6.16",
+    "lodash": "^4.17.4",
+    "react-helmet": "^5.2.0",
+    "react-overdrive": "^0.0.9",
+    "styled-components": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1"
+  },
+  "homepage": "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia#readme",
+  "keywords": [
+    "gatsby",
+    "starter-portfolio",
+    "designer",
+    "photographer",
+    "lekoarts"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeKoArts/gatsby-starter-portfolio-emilia.git"
+  },
+  "scripts": {
+    "dev": "gatsby develop -o",
+    "build": "gatsby build"
+  },
+  "browserslist": [
+    "> 1%",
+    "IE >= 9",
+    "last 2 versions"
+  ]
+}

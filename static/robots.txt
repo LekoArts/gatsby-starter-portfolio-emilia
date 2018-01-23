@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+sitemap: https://upbeat-edison-0598aa.netlify.com/sitemap.xml
