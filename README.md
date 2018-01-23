@@ -4,7 +4,7 @@
 
 A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience are designers and photographers.
 
-[Demo Website](coming soon)
+[Demo Website](https://upbeat-edison-0598aa.netlify.com)
 
 - Focus on big images
 - Dark theme
@@ -122,7 +122,7 @@ module.exports = {
 };
 ```
 
-You can also configure the styling by editing the ``config/Style.js`` file:
+You can also configure the styling by editing the ``config/Style`` file:
 
 ```JS
 // You can grab your own pattern here:
