@@ -35,7 +35,7 @@ const CardItem = styled(Link)`
 
     &:hover {
         transform: translateY(-15px);
-        color: inherit;
+        color: white;
         &:after {
             opacity: 1;
         }
