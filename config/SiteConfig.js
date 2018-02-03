@@ -3,7 +3,7 @@ module.exports = {
 
   siteTitle: 'Emilia', // Navigation and Site Title
   siteTitleAlt: 'Emilia - Gatsby Starter Portfolio', // Alternative Site title for SEO
-  siteUrl: 'https://upbeat-edison-0598aa.netlify.com', // Domain of your site. No trailing slash!
+  siteUrl: 'https://portfolio-emilia.netlify.com/', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
   siteDescription: 'Dark One-Page portfolio with cards & detailed project views',

@@ -4,7 +4,7 @@
 
 A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience are designers and photographers.
 
-[Demo Website](https://upbeat-edison-0598aa.netlify.com)
+[Demo Website](https://portfolio-emilia.netlify.com/)
 
 - Focus on big images
 - Dark theme
