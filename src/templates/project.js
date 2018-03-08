@@ -12,7 +12,7 @@ import ProjectPagination from '../components/ProjectPagination';
 import config from '../../config/SiteConfig';
 import * as palette from '../../config/Style';
 
-const Project = (props) => {
+const Project = props => {
   const { slug, next, prev } = props.pathContext;
   const postNode = props.data.markdownRemark;
   const project = postNode.frontmatter;
@@ -35,11 +35,12 @@ const Project = (props) => {
           margin: '-6rem auto 6rem auto',
         }}
       >
-        <div style={{
-        position: 'relative',
-        maxWidth: palette.MAX_WIDTH_PROJECT_DETAIL,
-        margin: '0 auto',
-      }}
+        <div
+          style={{
+            position: 'relative',
+            maxWidth: palette.MAX_WIDTH_PROJECT_DETAIL,
+            margin: '0 auto',
+          }}
         >
           <Overdrive id={`${slug}-cover`}>
             <Img sizes={project.cover.childImageSharp.sizes} />
@@ -62,11 +63,7 @@ export const pageQuery = graphql`
       frontmatter {
         cover {
           childImageSharp {
-            sizes(
-              maxWidth: 1600
-              quality: 90
-              traceSVG: { color: "#328bff" }
-            ) {
+            sizes(maxWidth: 1600, quality: 90, traceSVG: { color: "#328bff" }) {
               ...GatsbyImageSharpSizes_withWebp_tracedSVG
             }
             resize(width: 800) {

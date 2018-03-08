@@ -14,66 +14,64 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.div`
-    margin: 0 auto;
-    width: 100%;
-    max-width: ${palette.MAX_WIDTH}px;
-    padding: 2rem 1.0875rem 16rem 1.0875rem;
-    color: ${palette.SECONDARY_COLOR};
+  margin: 0 auto;
+  width: 100%;
+  max-width: ${palette.MAX_WIDTH}px;
+  padding: 2rem 1.0875rem 16rem 1.0875rem;
+  color: ${palette.SECONDARY_COLOR};
 `;
 
 const Back = styled(Link)`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 
-    img[data-info="back"] {
-        width: 25px;
-        height: 25px;
-        margin: 0 1rem 0 0;
-    }
+  img[data-info='back'] {
+    width: 25px;
+    height: 25px;
+    margin: 0 1rem 0 0;
+  }
 `;
 
 const Avatar = styled.div`
-    height: 40px;
-    width: 40px;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
+  height: 40px;
+  width: 40px;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
 
-    img {
-        border-radius: 50%;
-    }
+  img {
+    border-radius: 50%;
+  }
 `;
 
 const Name = styled.h4`
-    margin: 0 0 0 1rem;
-    color: ${palette.COLOR};
+  margin: 0 0 0 1rem;
+  color: ${palette.COLOR};
 `;
 
 const Details = styled.div`
-    width: 100%;
-    margin-top: 6rem;
-    text-align: center;
+  width: 100%;
+  margin-top: 6rem;
+  text-align: center;
 
-    h1 {
-        color: ${palette.COLOR};
-    }
+  h1 {
+    color: ${palette.COLOR};
+  }
 
-    span {
-        &:not(:last-child) {
-            margin-right: .25rem;
-            &:after {
-                content: ',';
-            }
-        }
+  span {
+    &:not(:last-child) {
+      margin-right: 0.25rem;
+      &:after {
+        content: ',';
+      }
     }
+  }
 `;
 
-const ProjectHeader = ({
-  avatar, name, title, date, areas,
-}) => (
+const ProjectHeader = ({ avatar, name, title, date, areas }) => (
   <Wrapper>
     <Content>
       <Back to="/">
@@ -90,10 +88,7 @@ const ProjectHeader = ({
       <Details>
         <h1>{title}</h1>
         <p>{date}</p>
-        <div>{areas.map(area => (
-          <span key={area}>{area}</span>
-        ))}
-        </div>
+        <div>{areas.map(area => <span key={area}>{area}</span>)}</div>
       </Details>
     </Content>
   </Wrapper>

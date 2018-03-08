@@ -15,7 +15,8 @@ const Grid = styled.div`
     grid-template-columns: 1fr;
   }
 
-  .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
+  .gatsby-image-outer-wrapper,
+  .gatsby-image-wrapper {
     position: static !important;
   }
 `;
@@ -27,17 +28,12 @@ const Content = styled.div`
   position: relative;
 `;
 
-const Index = (props) => {
+const Index = props => {
   const projectEdges = props.data.allMarkdownRemark.edges;
 
   return (
     <div>
-      <Header
-        avatar={config.avatar}
-        name={config.name}
-        location={config.location}
-        socialMedia={config.socialMedia}
-      />
+      <Header avatar={config.avatar} name={config.name} location={config.location} socialMedia={config.socialMedia} />
       <Content>
         <Grid>
           {projectEdges.map(project => (
@@ -50,7 +46,7 @@ const Index = (props) => {
               slug={project.node.fields.slug}
               key={project.node.fields.slug}
             />
-        ))}
+          ))}
         </Grid>
       </Content>
     </div>
@@ -71,11 +67,7 @@ export const pageQuery = graphql`
           frontmatter {
             cover {
               childImageSharp {
-                sizes(
-                  maxWidth: 850
-                  quality: 90
-                  traceSVG: { color: "#328bff" }
-                ) {
+                sizes(maxWidth: 850, quality: 90, traceSVG: { color: "#328bff" }) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }
               }

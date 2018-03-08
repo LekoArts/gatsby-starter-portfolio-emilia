@@ -33,7 +33,7 @@ injectGlobal`
   }
 `;
 
-const TemplateWrapper = (props) => {
+const TemplateWrapper = props => {
   const { children } = props;
 
   return (
@@ -41,9 +41,9 @@ const TemplateWrapper = (props) => {
       <Helmet
         title={config.siteTitleAlt}
         meta={[
-            { name: 'description', content: 'Gatsby Starter Portfolio - Emilia' },
-            { name: 'keywords', content: 'gatsby, starter, portfolio, lekoarts' },
-          ]}
+          { name: 'description', content: 'Gatsby Starter Portfolio - Emilia' },
+          { name: 'keywords', content: 'gatsby, starter, portfolio, lekoarts' },
+        ]}
       >
         <link rel="shortcut icon" href={favicon} />
       </Helmet>
