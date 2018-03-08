@@ -33,11 +33,15 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.5.1"
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "prettier": "^1.11.1"
   },
   "homepage":
     "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia#readme",
