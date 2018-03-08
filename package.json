@@ -33,14 +33,14 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
-    "babel-preset-env": "^1.6.1",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1"
   },
-  "homepage": "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia#readme",
+  "homepage":
+    "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia#readme",
   "keywords": [
     "gatsby",
     "starter-portfolio",
@@ -58,9 +58,5 @@
     "dev": "gatsby develop -o",
     "build": "gatsby build"
   },
-  "browserslist": [
-    "> 1%",
-    "IE >= 9",
-    "last 2 versions"
-  ]
+  "browserslist": ["> 1%", "IE >= 9", "last 2 versions"]
 }

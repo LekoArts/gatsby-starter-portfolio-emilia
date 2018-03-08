@@ -13,7 +13,12 @@ A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience
 
 ## Why?
 
-If you want to quickly bootstrap a design/photography portfolio or use it as a foundation for your personal site the *gatsby-starter-portfolio* are a perfect fit for you! The project's goal is to offer minimalistic and fast websites. [Tweet me](https://twitter.com/lekoarts_de) your website made with this starter!
+If you want to quickly bootstrap a design/photography portfolio or use it as a foundation for your personal site the *gatsby-starter-portfolio* are a perfect fit for you! The project's goal is to offer minimalistic and fast websites. 
+
+I hope you like my starters and create something awesome! To see some of my work you can visit my [website](https://www.lekoarts.de) or support me on [Patreon](https://www.patreon.com/lekoarts) to get some neat rewards (4K images, project files, tutorial insights).
+
+Also check out the other *gatsby-starter-portfolio*:
+- [gatsby-starter-portfolio-emma](https://github.com/LeKoArts/gatsby-starter-portfolio-emma)
 
 ## Features
 
@@ -152,7 +157,3 @@ export const CONTENT_PADDING = '1.0875rem';
 ```
 
 **Attention:** You also need to edit ``static/robots.txt`` to include your domain!
-
-## About Me
-
-Thanks for using my *gatsby-starter*. I hope you like it and create something awesome! To see some of my work you can visit my [website](https://www.lekoarts.de) or support me on [Patreon](https://www.patreon.com/lekoarts) to get some neat rewards (4K images, project files, tutorial insights).
