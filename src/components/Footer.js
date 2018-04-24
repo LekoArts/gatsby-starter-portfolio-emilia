@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import * as palette from '../../config/Style';
-
 const Content = styled.p`
-  color: ${palette.SECONDARY_COLOR};
-  padding: 0 ${palette.CONTENT_PADDING};
+  color: ${props => props.theme.colors.secondary};
+  padding: 0 ${props => props.theme.contentPadding};
   text-align: center;
 `;
 

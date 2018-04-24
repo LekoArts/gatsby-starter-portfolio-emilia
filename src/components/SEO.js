@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import config from '../../config/SiteConfig';
+import config from '../../config/site';
 
 const SEO = props => {
   const { postNode, postPath, postSEO } = props;

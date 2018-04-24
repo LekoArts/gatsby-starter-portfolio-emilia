@@ -2,20 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import Overdrive from 'react-overdrive';
 
-import * as palette from '../../config/Style';
-
 const Wrapper = styled.div`
-    background-color: #000000;
-    background-image: url("${palette.BG_PATTERN}");
+    background-color: #000;
+    background-image: url("${props => props.theme.bgPattern}");
     display: flex;
     position: relative;
 `;
 
 const Content = styled.div`
   margin: 0 auto;
-  max-width: ${palette.MAX_WIDTH}px;
+  max-width: ${props => props.theme.maxWidths.general};
   padding: 3rem 1.0875rem 10rem 1.0875rem;
-  color: ${palette.SECONDARY_COLOR};
+  color: ${props => props.theme.colors.secondary};
   text-align: center;
 `;
 
@@ -35,7 +33,7 @@ const Avatar = styled.div`
 
 const Name = styled.h1`
   margin: 1rem 0 0.25rem 0;
-  color: ${palette.COLOR};
+  color: ${props => props.theme.colors.color};
 `;
 
 const Location = styled.div`

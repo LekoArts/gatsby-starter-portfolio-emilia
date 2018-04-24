@@ -1,4 +1,5 @@
-const config = require('./config/SiteConfig');
+const theme = require('./config/theme');
+const config = require('./config/site');
 
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
 
@@ -31,7 +32,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 1600,
+              maxWidth: theme.maxWidths.project,
               quality: 90,
               linkImagesToOriginal: false,
             },
@@ -53,6 +54,7 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-react-next',
     {
       resolve: 'gatsby-plugin-typography',
       options: {

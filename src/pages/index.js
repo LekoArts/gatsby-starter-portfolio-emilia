@@ -3,12 +3,11 @@ import styled from 'styled-components';
 
 import Card from '../components/Card';
 import Header from '../components/Header';
-import config from '../../config/SiteConfig';
-import * as palette from '../../config/Style';
+import config from '../../config/site';
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(${palette.GRID_COLUMNS}, 1fr);
+  grid-template-columns: repeat(${props => props.theme.gridColumns}, 1fr);
   grid-gap: 50px;
 
   @media (max-width: 768px) {
@@ -23,35 +22,35 @@ const Grid = styled.div`
 
 const Content = styled.div`
   margin: -6rem auto 6rem auto;
-  max-width: ${palette.MAX_WIDTH}px;
-  padding: 0px ${palette.CONTENT_PADDING} 1.45rem;
+  max-width: ${props => props.theme.maxWidths.general};
+  padding: 0 ${props => props.theme.contentPadding} 1.45rem;
   position: relative;
 `;
 
-const Index = props => {
-  const projectEdges = props.data.allMarkdownRemark.edges;
-
-  return (
-    <div>
-      <Header avatar={config.avatar} name={config.name} location={config.location} socialMedia={config.socialMedia} />
-      <Content>
-        <Grid>
-          {projectEdges.map(project => (
-            <Card
-              date={project.node.frontmatter.date}
-              title={project.node.frontmatter.title}
-              cover={project.node.frontmatter.cover.childImageSharp.sizes}
-              path={project.node.fields.slug}
-              areas={project.node.frontmatter.areas}
-              slug={project.node.fields.slug}
-              key={project.node.fields.slug}
-            />
-          ))}
-        </Grid>
-      </Content>
-    </div>
-  );
-};
+const Index = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => (
+  <React.Fragment>
+    <Header avatar={config.avatar} name={config.name} location={config.location} socialMedia={config.socialMedia} />
+    <Content>
+      <Grid>
+        {edges.map(project => (
+          <Card
+            date={project.node.frontmatter.date}
+            title={project.node.frontmatter.title}
+            cover={project.node.frontmatter.cover.childImageSharp.sizes}
+            path={project.node.fields.slug}
+            areas={project.node.frontmatter.areas}
+            slug={project.node.fields.slug}
+            key={project.node.fields.slug}
+          />
+        ))}
+      </Grid>
+    </Content>
+  </React.Fragment>
+);
 
 export default Index;
 
@@ -72,7 +71,7 @@ export const pageQuery = graphql`
                 }
               }
             }
-            date
+            date(formatString: "DD.MM.YYYY")
             title
             areas
           }

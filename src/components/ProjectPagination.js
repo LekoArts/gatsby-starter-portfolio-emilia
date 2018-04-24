@@ -2,16 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 
-import * as palette from '../../config/Style';
 import arrowLeft from './left-chevron.svg';
 import arrowRight from './right-chevron.svg';
 
 const Wrapper = styled.div`
   display: flex;
-  max-width: ${palette.MAX_WIDTH}px;
+  max-width: ${props => props.theme.maxWidths.general};
   margin: 6rem auto;
   a {
-    color: ${palette.COLOR};
+    color: ${props => props.theme.colors.color};
     display: flex;
     align-items: center;
     font-size: 1.25rem;

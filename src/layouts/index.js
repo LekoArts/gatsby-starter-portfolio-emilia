@@ -1,31 +1,31 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { injectGlobal } from 'styled-components';
+import { injectGlobal, ThemeProvider } from 'styled-components';
 
 import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import favicon from './favicon.ico';
-import config from '../../config/SiteConfig';
-import * as palette from '../../config/Style';
+import config from '../../config/site';
+import theme from '../../config/theme';
 
 /* eslint no-unused-expressions: off */
 injectGlobal`
   body {
-    background: #16191f;
-    color: ${palette.COLOR};
+    background: ${theme.colors.bg};
+    color: ${theme.colors.color};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   a {
-    color: ${palette.LINK_COLOR};
+    color: ${theme.colors.link};
     transition: color .5s;
     text-decoration: none;
   }
 
   a:hover {
     text-decoration: none;
-    color: ${palette.LINK_HOVER_COLOR};
+    color: ${theme.colors.linkHover};
   }
 
   .gatsby-resp-image-wrapper {
@@ -33,11 +33,9 @@ injectGlobal`
   }
 `;
 
-const TemplateWrapper = props => {
-  const { children } = props;
-
-  return (
-    <div>
+const TemplateWrapper = ({ children }) => (
+  <ThemeProvider theme={theme}>
+    <React.Fragment>
       <Helmet
         title={config.siteTitleAlt}
         meta={[
@@ -50,8 +48,8 @@ const TemplateWrapper = props => {
       <SEO />
       {children()}
       <Footer />
-    </div>
-  );
-};
+    </React.Fragment>
+  </ThemeProvider>
+);
 
 export default TemplateWrapper;

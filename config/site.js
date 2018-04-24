@@ -13,17 +13,13 @@ module.exports = {
   ogSiteName: 'emilia', // Facebook Site Name
   googleAnalyticsID: 'UA-12345689-1',
 
-  // Date format used in your project
-  // More information here: https://date-fns.org/v1.29.0/docs/format
-  dateFormat: 'DD.MM.YYYY',
-
   // Manifest and Progress color
   themeColor: '#3498DB',
   backgroundColor: '#2b2e3c',
 
   // Settings for typography.js
   headerFontFamily: 'Open Sans',
-  bodyFontFamily: 'Merriweather',
+  bodyFontFamily: 'Space Mono',
   baseFontSize: '16px',
 
   // Your information
