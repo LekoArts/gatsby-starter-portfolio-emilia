@@ -3,13 +3,13 @@ module.exports = {
 
   siteTitle: 'Emilia', // Navigation and Site Title
   siteTitleAlt: 'Emilia - Gatsby Starter Portfolio', // Alternative Site title for SEO
-  siteUrl: 'https://portfolio-emilia.netlify.com/', // Domain of your site. No trailing slash!
+  siteUrl: 'https://portfolio-emilia.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
   siteDescription: 'Dark One-Page portfolio with cards & detailed project views',
 
   siteFBAppID: '123456789', // Facebook App ID
-  userTwitter: 'emilia', // Twitter Username
+  userTwitter: '@emilia', // Twitter Username
   ogSiteName: 'emilia', // Facebook Site Name
   googleAnalyticsID: 'UA-12345689-1',
 
