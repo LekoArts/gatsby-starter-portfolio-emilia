@@ -82,7 +82,7 @@ Copy the content of the ``public`` folder to your webhost or use a website like 
 
 ## Configuration
 
-You can configure your setup in ``config/SiteConfig``:
+You can configure your setup in ``config/site.js``:
 
 ```JS
 module.exports = {
@@ -93,16 +93,13 @@ module.exports = {
   siteUrl: 'https://portfolio-emilia.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
-  siteDescription: 'Dark One-Page Portfolio with Cards & detailed project views',
+  siteDescription: 'Dark One-Page portfolio with cards & detailed project views',
 
   siteFBAppID: '123456789', // Facebook App ID
   userTwitter: '@emilia', // Twitter Username
   ogSiteName: 'emilia', // Facebook Site Name
+  ogLanguage: 'de_DE', // og:language
   googleAnalyticsID: 'UA-12345689-1',
-
-  // Date format used in your project
-  // More information here: https://date-fns.org/v1.29.0/docs/format
-  dateFormat: 'DD.MM.YYYY',
 
   // Manifest and Progress color
   themeColor: '#3498DB',
@@ -110,7 +107,7 @@ module.exports = {
 
   // Settings for typography.js
   headerFontFamily: 'Open Sans',
-  bodyFontFamily: 'Merriweather',
+  bodyFontFamily: 'Space Mono',
   baseFontSize: '16px',
 
   // Your information
@@ -130,7 +127,7 @@ module.exports = {
 };
 ```
 
-You can also configure the styling by editing the ``config/Style`` file:
+You can also configure the styling by editing the ``config/theme.js`` file:
 
 ```JS
 // You can grab your own pattern here:
