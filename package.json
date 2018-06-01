@@ -7,43 +7,45 @@
     "url": "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia/issues"
   },
   "dependencies": {
-    "gatsby": "^1.9.253",
-    "gatsby-image": "^1.0.47",
-    "gatsby-link": "^1.6.41",
+    "babel-plugin-styled-components": "^1.5.1",
+    "gatsby": "^1.9.266",
+    "gatsby-image": "^1.0.51",
+    "gatsby-link": "^1.6.44",
     "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-lodash": "^1.0.11",
-    "gatsby-plugin-manifest": "^1.0.20",
+    "gatsby-plugin-manifest": "^1.0.24",
     "gatsby-plugin-nprogress": "^1.0.14",
-    "gatsby-plugin-offline": "^1.0.15",
+    "gatsby-plugin-offline": "^1.0.18",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-react-next": "^1.0.11",
-    "gatsby-plugin-sharp": "^1.6.43",
-    "gatsby-plugin-sitemap": "^1.2.22",
+    "gatsby-plugin-sharp": "^1.6.46",
+    "gatsby-plugin-sitemap": "^1.2.25",
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-plugin-typography": "^1.7.18",
     "gatsby-remark-external-links": "^0.0.4",
-    "gatsby-remark-images": "^1.5.62",
-    "gatsby-source-filesystem": "^1.5.33",
-    "gatsby-transformer-remark": "^1.7.40",
-    "gatsby-transformer-sharp": "^1.6.23",
-    "lodash": "^4.17.5",
+    "gatsby-remark-images": "^1.5.65",
+    "gatsby-source-filesystem": "^1.5.38",
+    "gatsby-transformer-remark": "^1.7.41",
+    "gatsby-transformer-sharp": "^1.6.26",
+    "lodash": "^4.17.10",
     "react-helmet": "^5.2.0",
-    "react-overdrive": "^0.0.9",
+    "react-overdrive": "^0.0.10",
     "styled-components": "^3.2.6"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-react": "^7.7.0",
-    "prettier": "^1.12.1"
+    "eslint-plugin-react": "^7.8.2",
+    "prettier": "^1.13.3"
   },
-  "homepage": "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia#readme",
+  "homepage":
+    "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia#readme",
   "keywords": [
     "gatsby",
     "starter-portfolio",
@@ -61,9 +63,5 @@
     "dev": "gatsby develop -o",
     "build": "gatsby build"
   },
-  "browserslist": [
-    "> 1%",
-    "IE >= 9",
-    "last 2 versions"
-  ]
+  "browserslist": ["> 1%", "IE >= 9", "last 2 versions"]
 }

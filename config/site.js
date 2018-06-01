@@ -11,6 +11,7 @@ module.exports = {
   siteFBAppID: '123456789', // Facebook App ID
   userTwitter: '@emilia', // Twitter Username
   ogSiteName: 'emilia', // Facebook Site Name
+  ogLanguage: 'de_DE', // og:language
   googleAnalyticsID: 'UA-12345689-1',
 
   // Manifest and Progress color

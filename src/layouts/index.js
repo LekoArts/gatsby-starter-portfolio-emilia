@@ -36,13 +36,7 @@ injectGlobal`
 const TemplateWrapper = ({ children }) => (
   <ThemeProvider theme={theme}>
     <React.Fragment>
-      <Helmet
-        title={config.siteTitleAlt}
-        meta={[
-          { name: 'description', content: 'Gatsby Starter Portfolio - Emilia' },
-          { name: 'keywords', content: 'gatsby, starter, portfolio, lekoarts' },
-        ]}
-      >
+      <Helmet>
         <link rel="shortcut icon" href={favicon} />
       </Helmet>
       <SEO />
