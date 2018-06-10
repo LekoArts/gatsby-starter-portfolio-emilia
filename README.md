@@ -22,6 +22,7 @@ I hope you like my starters and create something awesome! To see some of my work
 Also check out the other *gatsby-starter-portfolio*:
 - [gatsby-starter-portfolio-emma](https://github.com/LeKoArts/gatsby-starter-portfolio-emma)
 - [gatsby-starter-portfolio-bella](https://github.com/LeKoArts/gatsby-starter-portfolio-bella)
+- [gatsby-starter-portfolio-cara](https://github.com/LeKoArts/gatsby-starter-portfolio-cara)
 
 ## Features
 
