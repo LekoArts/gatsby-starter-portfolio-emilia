@@ -1,36 +1,41 @@
 {
   "name": "gatsby-starter-portfolio-emilia",
   "description": "Gatsby Starter Portfolio Emilia",
-  "version": "1.0.0",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "version": "2.0.0",
+  "author": "LekoArts <hello@lekoarts.de> (https://www.lekoarts.de)",
   "bugs": {
     "url": "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia/issues"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.5.1",
-    "gatsby": "^1.9.266",
-    "gatsby-image": "^1.0.51",
-    "gatsby-link": "^1.6.44",
-    "gatsby-plugin-google-analytics": "^1.0.31",
-    "gatsby-plugin-lodash": "^1.0.11",
-    "gatsby-plugin-manifest": "^1.0.24",
-    "gatsby-plugin-nprogress": "^1.0.14",
-    "gatsby-plugin-offline": "^1.0.18",
-    "gatsby-plugin-react-helmet": "^2.0.11",
-    "gatsby-plugin-react-next": "^1.0.11",
-    "gatsby-plugin-sharp": "^1.6.46",
-    "gatsby-plugin-sitemap": "^1.2.25",
-    "gatsby-plugin-styled-components": "^2.0.11",
-    "gatsby-plugin-typography": "^1.7.18",
+    "emotion": "^9.2.6",
+    "emotion-server": "^9.2.6",
+    "emotion-theming": "^9.2.6",
+    "gatsby": "^2.0.0-beta.75",
+    "gatsby-image": "^2.0.0-beta.7",
+    "gatsby-plugin-emotion": "^2.0.0-beta.3",
+    "gatsby-plugin-google-analytics": "^2.0.0-beta.4",
+    "gatsby-plugin-lodash": "^3.0.1-beta.3",
+    "gatsby-plugin-manifest": "^2.0.2-beta.4",
+    "gatsby-plugin-nprogress": "^2.0.0-beta.4",
+    "gatsby-plugin-offline": "^2.0.0-beta.9",
+    "gatsby-plugin-react-helmet": "^3.0.0-beta.4",
+    "gatsby-plugin-sharp": "^2.0.0-beta.7",
+    "gatsby-plugin-sitemap": "^2.0.0-beta.3",
+    "gatsby-plugin-typography": "^2.2.0-beta.3",
     "gatsby-remark-external-links": "^0.0.4",
-    "gatsby-remark-images": "^1.5.65",
-    "gatsby-source-filesystem": "^1.5.38",
-    "gatsby-transformer-remark": "^1.7.41",
-    "gatsby-transformer-sharp": "^1.6.26",
+    "gatsby-remark-images": "^2.0.1-beta.10",
+    "gatsby-source-filesystem": "^2.0.1-beta.10",
+    "gatsby-transformer-remark": "^2.1.1-beta.6",
+    "gatsby-transformer-sharp": "^2.1.1-beta.6",
     "lodash": "^4.17.10",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-emotion": "^9.2.6",
     "react-helmet": "^5.2.0",
     "react-overdrive": "^0.0.10",
-    "styled-components": "^3.2.6"
+    "react-typography": "^0.16.13",
+    "typography": "^0.16.17"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
@@ -41,11 +46,10 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-react": "^7.8.2",
-    "prettier": "^1.13.3"
+    "eslint-plugin-react": "^7.9.1",
+    "prettier": "^1.13.5"
   },
-  "homepage":
-    "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia#readme",
+  "homepage": "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia#readme",
   "keywords": [
     "gatsby",
     "starter-portfolio",
@@ -61,7 +65,7 @@
   },
   "scripts": {
     "dev": "gatsby develop -o",
-    "build": "gatsby build"
-  },
-  "browserslist": ["> 1%", "IE >= 9", "last 2 versions"]
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  }
 }
