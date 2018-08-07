@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import styled from 'react-emotion';
 
-import Card from '../components/Card';
-import Header from '../components/Header';
+import { Card, Header, Layout } from 'components';
 import config from '../../config/site';
 
 const Grid = styled.div`
@@ -32,7 +33,7 @@ const Index = ({
     allMarkdownRemark: { edges },
   },
 }) => (
-  <React.Fragment>
+  <Layout>
     <Header avatar={config.avatar} name={config.name} location={config.location} socialMedia={config.socialMedia} />
     <Content>
       <Grid>
@@ -40,7 +41,7 @@ const Index = ({
           <Card
             date={project.node.frontmatter.date}
             title={project.node.frontmatter.title}
-            cover={project.node.frontmatter.cover.childImageSharp.sizes}
+            cover={project.node.frontmatter.cover.childImageSharp.fluid}
             path={project.node.fields.slug}
             areas={project.node.frontmatter.areas}
             slug={project.node.fields.slug}
@@ -49,12 +50,19 @@ const Index = ({
         ))}
       </Grid>
     </Content>
-  </React.Fragment>
+  </Layout>
 );
 
 export default Index;
 
-/* eslint no-undef: off */
+Index.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array.isRequired,
+    }),
+  }).isRequired,
+};
+
 export const pageQuery = graphql`
   query HomeQuery {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -66,8 +74,8 @@ export const pageQuery = graphql`
           frontmatter {
             cover {
               childImageSharp {
-                sizes(maxWidth: 850, quality: 90, traceSVG: { color: "#328bff" }) {
-                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                fluid(maxWidth: 850, quality: 90, traceSVG: { color: "#328bff" }) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }

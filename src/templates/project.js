@@ -1,12 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import Overdrive from 'react-overdrive';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
-import SEO from '../components/SEO';
-import ProjectHeader from '../components/ProjectHeader';
-import ProjectPagination from '../components/ProjectPagination';
+import { Layout, ProjectHeader, ProjectPagination, SEO } from 'components';
 import config from '../../config/site';
 
 const OuterWrapper = styled.div`
@@ -21,12 +21,12 @@ const InnerWrapper = styled.div`
 `;
 
 const Project = props => {
-  const { slug, next, prev } = props.pathContext;
+  const { slug, next, prev } = props.pageContext;
   const postNode = props.data.markdownRemark;
   const project = postNode.frontmatter;
 
   return (
-    <React.Fragment>
+    <Layout>
       <Helmet title={`${project.title} | ${config.siteTitle}`} />
       <SEO postPath={slug} postNode={postNode} postSEO />
       <ProjectHeader
@@ -39,19 +39,29 @@ const Project = props => {
       <OuterWrapper>
         <InnerWrapper>
           <Overdrive id={`${slug}-cover`}>
-            <Img sizes={project.cover.childImageSharp.sizes} />
+            <Img fluid={project.cover.childImageSharp.fluid} />
           </Overdrive>
         </InnerWrapper>
         <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
         <ProjectPagination next={next} prev={prev} />
       </OuterWrapper>
-    </React.Fragment>
+    </Layout>
   );
 };
 
 export default Project;
 
-/* eslint no-undef: off */
+Project.propTypes = {
+  pageContext: PropTypes.shape({
+    slug: PropTypes.string.isRequired,
+    next: PropTypes.string.isRequired,
+    prev: PropTypes.string.isRequired,
+  }).isRequired,
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.object.isRequired,
+  }).isRequired,
+};
+
 export const pageQuery = graphql`
   query ProjectPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -59,8 +69,8 @@ export const pageQuery = graphql`
       frontmatter {
         cover {
           childImageSharp {
-            sizes(maxWidth: 1600, quality: 90, traceSVG: { color: "#328bff" }) {
-              ...GatsbyImageSharpSizes_withWebp_tracedSVG
+            fluid(maxWidth: 1600, quality: 90, traceSVG: { color: "#328bff" }) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
             resize(width: 800) {
               src

@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
-import Link from 'gatsby-link';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
-import arrowLeft from './left-chevron.svg';
-import arrowRight from './right-chevron.svg';
+import arrowLeft from '../images/left-chevron.svg';
+import arrowRight from '../images/right-chevron.svg';
 
 const Wrapper = styled.div`
   display: flex;
@@ -58,3 +59,8 @@ const ProjectPagination = ({ next, prev }) => (
 );
 
 export default ProjectPagination;
+
+ProjectPagination.propTypes = {
+  next: PropTypes.node.isRequired,
+  prev: PropTypes.node.isRequired,
+};

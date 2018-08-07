@@ -28,15 +28,16 @@ Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfol
 
 ## Features
 
+- Gatsby v2
 - Configurable
-    - Use the SiteConfig.js to easily change the most important information
+    - Use the site.js to easily change the most important information
     - Google Fonts
-    - Use the Style.js to configure your CSS
+    - Use the theme.js to configure your CSS
 - Projects in Markdown
 - Element Transitions with [React Overdrive](https://github.com/berzniz/react-overdrive)
 - Image Grid with CSS Grid
 - [HeroPatterns](http://www.heropatterns.com/) Header
-- Styled components
+- Emotion
 - Google Analytics Support
 - SEO
     - Sitemap
@@ -68,7 +69,8 @@ npm run dev
 - Create a new folder in ``content/projects`` with the current date (Format: YYYY-MM-DD)
 - Create a new markdown file, add the frontmatter (use the same date format)
     - Reference the image you want to be shown in the grid and as the first image on the project as ``cover``
-- Add your other images below the frontmatter (you can also include text)
+- Add optional text under the frontmatter
+- Add your other images in the folder
 
 If you're still unsure have a look at the already existing examples.
 
@@ -109,8 +111,8 @@ module.exports = {
   backgroundColor: '#2b2e3c',
 
   // Settings for typography.js
-  headerFontFamily: 'Open Sans',
-  bodyFontFamily: 'Space Mono',
+  headerFontFamily: 'Fira Sans',
+  bodyFontFamily: 'Montserrat',
   baseFontSize: '16px',
 
   // Your information

@@ -10,7 +10,13 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-emotion',
+      options: {
+        autoLabel: process.env.NODE_ENV !== 'production',
+        labelFormat: '[filename]--[local]',
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -54,7 +60,7 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-next',
+    'gatsby-plugin-lodash',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
@@ -71,21 +77,11 @@ module.exports = {
         start_url: config.pathPrefix,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
-        display: 'minimal-ui',
-        icons: [
-          {
-            src: '/logos/logo-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/logos/logo-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
+        display: 'standalone',
+        icon: 'src/favicon.png',
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-plugin-netlify',
   ],
 };

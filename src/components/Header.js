@@ -1,10 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 import Overdrive from 'react-overdrive';
 
 const Wrapper = styled.div`
-    background-color: #000;
-    background-image: url("${props => props.theme.bgPattern}");
+    background: url("${props => props.theme.bgPattern}") #000;
     display: flex;
     position: relative;
 `;
@@ -75,3 +75,10 @@ const Header = ({ avatar, name, location, socialMedia }) => (
 );
 
 export default Header;
+
+Header.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  socialMedia: PropTypes.array.isRequired,
+};
