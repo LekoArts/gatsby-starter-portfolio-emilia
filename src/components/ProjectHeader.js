@@ -70,7 +70,13 @@ const Details = styled.div`
   }
 `;
 
-const ProjectHeader = ({ avatar, name, title, date, areas }) => (
+const Text = styled.div`
+  max-width: 750px;
+  margin: 4rem auto 2rem auto;
+  color: white;
+`;
+
+const ProjectHeader = ({ avatar, name, title, date, areas, text }) => (
   <Wrapper>
     <Content>
       <Back to="/">
@@ -92,6 +98,7 @@ const ProjectHeader = ({ avatar, name, title, date, areas }) => (
             <span key={area}>{area}</span>
           ))}
         </div>
+        {text && <Text dangerouslySetInnerHTML={{ __html: text }} />}
       </Details>
     </Content>
   </Wrapper>
@@ -105,4 +112,5 @@ ProjectHeader.propTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   areas: PropTypes.array.isRequired,
+  text: PropTypes.string.isRequired,
 };

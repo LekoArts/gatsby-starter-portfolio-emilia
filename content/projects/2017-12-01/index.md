@@ -6,6 +6,3 @@ areas:
     - Photography
     - Art
 ---
-
-![](./andrea-natali.jpg)
-![](./kari-shea.jpg)

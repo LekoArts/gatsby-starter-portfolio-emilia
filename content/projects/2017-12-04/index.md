@@ -5,6 +5,3 @@ title: "Matt Cannon"
 areas:
     - Photography
 ---
-
-![](./isak-dalsfelt.jpg)
-![](./trevor-cole.jpg)

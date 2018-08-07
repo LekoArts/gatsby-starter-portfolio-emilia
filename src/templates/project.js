@@ -16,13 +16,14 @@ const OuterWrapper = styled.div`
 
 const InnerWrapper = styled.div`
   position: relative;
-  max-width: ${props => props.theme.maxWidths.project}px;
+  max-width: ${props => `${props.theme.maxWidths.project}px`};
   margin: 0 auto;
 `;
 
 const Project = props => {
   const { slug, next, prev } = props.pageContext;
-  const postNode = props.data.markdownRemark;
+  const postNode = props.data.project;
+  const images = props.data.images.edges;
   const project = postNode.frontmatter;
 
   return (
@@ -35,14 +36,21 @@ const Project = props => {
         date={project.date}
         title={project.title}
         areas={project.areas}
+        text={postNode.html}
       />
       <OuterWrapper>
         <InnerWrapper>
           <Overdrive id={`${slug}-cover`}>
             <Img fluid={project.cover.childImageSharp.fluid} />
           </Overdrive>
+          {images.map(image => (
+            <Img
+              key={image.node.childImageSharp.fluid.src}
+              fluid={image.node.childImageSharp.fluid}
+              style={{ margin: '2.75rem 0' }}
+            />
+          ))}
         </InnerWrapper>
-        <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
         <ProjectPagination next={next} prev={prev} />
       </OuterWrapper>
     </Layout>
@@ -54,17 +62,38 @@ export default Project;
 Project.propTypes = {
   pageContext: PropTypes.shape({
     slug: PropTypes.string.isRequired,
-    next: PropTypes.string.isRequired,
-    prev: PropTypes.string.isRequired,
-  }).isRequired,
+    next: PropTypes.object,
+    prev: PropTypes.object,
+  }),
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object.isRequired,
+    project: PropTypes.object.isRequired,
+    images: PropTypes.object.isRequired,
   }).isRequired,
 };
 
+Project.defaultProps = {
+  pageContext: PropTypes.shape({
+    next: null,
+    prev: null,
+  }),
+};
+
 export const pageQuery = graphql`
-  query ProjectPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query ProjectPostBySlug($slug: String!, $absolutePathRegex: String!, $absolutePathCover: String!) {
+    images: allFile(
+      filter: { absolutePath: { ne: $absolutePathCover, regex: $absolutePathRegex }, extension: { eq: "jpg" } }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 1600, quality: 90, traceSVG: { color: "#328bff" }) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+      }
+    }
+    project: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         cover {

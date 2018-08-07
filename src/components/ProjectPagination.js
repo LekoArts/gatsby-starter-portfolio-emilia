@@ -61,6 +61,11 @@ const ProjectPagination = ({ next, prev }) => (
 export default ProjectPagination;
 
 ProjectPagination.propTypes = {
-  next: PropTypes.node.isRequired,
-  prev: PropTypes.node.isRequired,
+  next: PropTypes.object,
+  prev: PropTypes.object,
+};
+
+ProjectPagination.defaultProps = {
+  next: null,
+  prev: null,
 };

@@ -7,5 +7,4 @@ areas:
     - Art
 ---
 
-![](./matt-safian.jpg)
-![](./robert-katzki.jpg)
+Hi! I hope you like this theme and enjoy working with it.

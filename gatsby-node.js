@@ -32,11 +32,15 @@ exports.createPages = ({ graphql, actions }) => {
           projects: allMarkdownRemark {
             edges {
               node {
+                fileAbsolutePath
                 fields {
                   slug
                 }
                 frontmatter {
                   title
+                  cover {
+                    absolutePath
+                  }
                 }
               }
             }
@@ -60,6 +64,8 @@ exports.createPages = ({ graphql, actions }) => {
             component: projectPage,
             context: {
               slug: edge.node.fields.slug,
+              absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
+              absolutePathCover: edge.node.frontmatter.cover.absolutePath,
               prev,
               next,
             },
