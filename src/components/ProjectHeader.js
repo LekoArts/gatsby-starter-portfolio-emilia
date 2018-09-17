@@ -1,13 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
-import Link from 'gatsby-link';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 import Overdrive from 'react-overdrive';
 
-import arrow from './left-chevron.svg';
+import arrow from '../images/left-chevron.svg';
 
 const Wrapper = styled.div`
-    background-color: #000;
-    background-image: url("${props => props.theme.bgPattern}");
+    background: url("${props => props.theme.bgPattern}") #000;
     display: flex;
     position: relative;
 `;
@@ -70,7 +70,13 @@ const Details = styled.div`
   }
 `;
 
-const ProjectHeader = ({ avatar, name, title, date, areas }) => (
+const Text = styled.div`
+  max-width: 750px;
+  margin: 4rem auto 2rem auto;
+  color: white;
+`;
+
+const ProjectHeader = ({ avatar, name, title, date, areas, text }) => (
   <Wrapper>
     <Content>
       <Back to="/">
@@ -87,10 +93,24 @@ const ProjectHeader = ({ avatar, name, title, date, areas }) => (
       <Details>
         <h1>{title}</h1>
         <p>{date}</p>
-        <div>{areas.map(area => <span key={area}>{area}</span>)}</div>
+        <div>
+          {areas.map(area => (
+            <span key={area}>{area}</span>
+          ))}
+        </div>
+        {text && <Text dangerouslySetInnerHTML={{ __html: text }} />}
       </Details>
     </Content>
   </Wrapper>
 );
 
 export default ProjectHeader;
+
+ProjectHeader.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  areas: PropTypes.array.isRequired,
+  text: PropTypes.string.isRequired,
+};

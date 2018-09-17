@@ -1,14 +1,12 @@
+/* eslint no-unused-expressions: off */
 import React from 'react';
-import Helmet from 'react-helmet';
-import { injectGlobal, ThemeProvider } from 'styled-components';
+import PropTypes from 'prop-types';
+import { injectGlobal } from 'emotion';
+import { ThemeProvider } from 'emotion-theming';
 
-import SEO from '../components/SEO';
-import Footer from '../components/Footer';
-import favicon from './favicon.ico';
-import config from '../../config/site';
+import { SEO, Footer } from 'components';
 import theme from '../../config/theme';
 
-/* eslint no-unused-expressions: off */
 injectGlobal`
   body {
     background: ${theme.colors.bg};
@@ -33,17 +31,18 @@ injectGlobal`
   }
 `;
 
-const TemplateWrapper = ({ children }) => (
+const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <React.Fragment>
-      <Helmet>
-        <link rel="shortcut icon" href={favicon} />
-      </Helmet>
       <SEO />
-      {children()}
+      {children}
       <Footer />
     </React.Fragment>
   </ThemeProvider>
 );
 
-export default TemplateWrapper;
+export default Layout;
+
+Layout.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,
+};

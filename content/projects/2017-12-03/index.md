@@ -5,6 +5,3 @@ title: "Roman Kraft"
 areas:
     - Still
 ---
-
-![](./carlota-vidal.jpg)
-![](./tanalee-youngblood.jpg)

@@ -6,5 +6,4 @@ areas:
     - Photography
 ---
 
-![](./averie-woodard.jpg)
-![](./sabina-ciesielska.jpg)
+Lorem ipsum dolor sit amet Mona Magnussen. Ipsum dolor sit amet.

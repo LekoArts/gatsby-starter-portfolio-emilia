@@ -1,7 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import Overdrive from 'react-overdrive';
 
 const CardItem = styled(Link)`
@@ -116,7 +117,11 @@ const Card = ({ path, cover, date, areas, title, slug }) => (
       </Cover>
       <Header>
         <DateWrapper>{date}</DateWrapper>
-        <Areas>{areas.map(area => <AreaItem key={area}>{area}</AreaItem>)}</Areas>
+        <Areas>
+          {areas.map(area => (
+            <AreaItem key={area}>{area}</AreaItem>
+          ))}
+        </Areas>
       </Header>
       <Data>
         <Content>
@@ -128,3 +133,12 @@ const Card = ({ path, cover, date, areas, title, slug }) => (
 );
 
 export default Card;
+
+Card.propTypes = {
+  path: PropTypes.string.isRequired,
+  cover: PropTypes.object.isRequired,
+  date: PropTypes.string.isRequired,
+  areas: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+};
