@@ -14,7 +14,7 @@ const SEO = props => {
   if (postSEO) {
     const postMeta = postNode.frontmatter;
     title = postMeta.title; // eslint-disable-line prefer-destructuring
-    description = postNode.excerpt;
+    description = postNode.excerpt || config.siteDescription;
     image = postMeta.cover.childImageSharp.resize.src;
     postURL = config.siteUrl + realPrefix + postPath;
   } else {
@@ -24,36 +24,23 @@ const SEO = props => {
   }
   image = config.siteUrl + realPrefix + image;
   const blogURL = config.siteUrl + config.pathPrefix;
-  const schemaOrgJSONLD = [
+  let schemaOrgJSONLD = [
     {
       '@context': 'http://schema.org',
       '@type': 'WebSite',
+      '@id': blogURL,
       url: blogURL,
       name: title,
       alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
     },
   ];
   if (postSEO) {
-    schemaOrgJSONLD.push(
-      {
-        '@context': 'http://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            item: {
-              '@id': postURL,
-              name: title,
-              image,
-            },
-          },
-        ],
-      },
+    schemaOrgJSONLD = [
       {
         '@context': 'http://schema.org',
         '@type': 'BlogPosting',
-        url: blogURL,
+        '@id': postURL,
+        url: postURL,
         name: title,
         alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
         headline: title,
@@ -62,8 +49,27 @@ const SEO = props => {
           url: image,
         },
         description,
-      }
-    );
+        datePublished: postNode.frontmatter.date,
+        dateModified: postNode.frontmatter.date,
+        author: {
+          '@type': 'Person',
+          name: config.name,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: config.name,
+          logo: {
+            '@type': 'ImageObject',
+            url: config.siteUrl + realPrefix + config.siteLogo,
+          },
+        },
+        isPartOf: blogURL,
+        mainEntityOfPage: {
+          '@type': 'WebSite',
+          '@id': blogURL,
+        },
+      },
+    ];
   }
   return (
     <Helmet>
@@ -73,7 +79,7 @@ const SEO = props => {
       <meta name="image" content={image} />
       <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
       <meta property="og:locale" content={config.ogLanguage} />
-      <meta property="og:site_name" content={config.ogSiteName} />
+      <meta property="og:site_name" content={config.ogSiteName ? config.ogSiteName : ''} />
       <meta property="og:url" content={postSEO ? postURL : blogURL} />
       {postSEO ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />

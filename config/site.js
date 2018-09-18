@@ -8,10 +8,10 @@ module.exports = {
   siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
   siteDescription: 'Dark One-Page portfolio with cards & detailed project views',
 
-  siteFBAppID: '123456789', // Facebook App ID
+  // siteFBAppID: '123456789', // Facebook App ID - Optional
   userTwitter: '@emilia', // Twitter Username
   ogSiteName: 'emilia', // Facebook Site Name
-  ogLanguage: 'de_DE', // og:language
+  ogLanguage: 'en_US', // og:language
   googleAnalyticsID: 'UA-12345689-1',
 
   // Manifest and Progress color

@@ -95,6 +95,7 @@ export const pageQuery = graphql`
     }
     project: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       frontmatter {
         cover {
           childImageSharp {
