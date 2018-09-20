@@ -68,9 +68,8 @@ npm run dev
 ### Adding a new project
 - Create a new folder in ``content/projects`` with the current date (Format: YYYY-MM-DD)
 - Create a new markdown file, add the frontmatter (use the same date format)
-    - Reference the image you want to be shown in the grid and as the first image on the project as ``cover``
-- Add optional text under the frontmatter
-- Add your other images in the folder
+- Add text under the frontmatter (will be placed before the images)
+- Add your images in the folder (they will automatically be placed in the document)
 
 If you're still unsure have a look at the already existing examples.
 
