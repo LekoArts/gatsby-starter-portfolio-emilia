@@ -76,7 +76,7 @@ If you're still unsure have a look at the already existing examples.
 
 ### Adding new features/plugins
 
-You can add other features by having a look at the offical [plugins page](https://www.gatsbyjs.org/docs/plugins/)
+You can add other features by having a look at the official [plugins page](https://www.gatsbyjs.org/docs/plugins/)
 
 ### Building your site
 
