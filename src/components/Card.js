@@ -20,8 +20,8 @@ const CardItem = styled(Link)`
     content: '';
     position: absolute;
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 102%;
+    height: 102%;
     left: 0;
     right: 0;
     bottom: 0;

@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "author": "LekoArts <hello@lekoarts.de> (https://www.lekoarts.de)",
   "bugs": {
-    "url": "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia/issues"
+    "url": "https://github.com/LekoArts/gatsby-starter-portfolio-emilia/issues"
   },
   "dependencies": {
     "emotion": "^9.2.12",
@@ -50,19 +50,18 @@
     "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.14.3"
   },
-  "homepage": "https://github.com/LeKoArts/gatsby-starter-portfolio-emilia#readme",
+  "homepage": "https://github.com/LekoArts/gatsby-starter-portfolio-emilia#readme",
   "keywords": [
     "gatsby",
+    "gatsby-starter",
     "starter-portfolio",
-    "designer",
-    "photographer",
     "lekoarts"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LeKoArts/gatsby-starter-portfolio-emilia.git"
+    "url": "git+https://github.com/LekoArts/gatsby-starter-portfolio-emilia.git"
   },
   "scripts": {
     "dev": "gatsby develop -o",

@@ -20,10 +20,8 @@ const InnerWrapper = styled.div`
   margin: 0 auto;
 `;
 
-const Project = props => {
-  const { slug, next, prev } = props.pageContext;
-  const postNode = props.data.project;
-  const images = props.data.images.edges;
+const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode, images: imgs } }) => {
+  const images = imgs.edges;
   const project = postNode.frontmatter;
 
   return (

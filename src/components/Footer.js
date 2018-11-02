@@ -9,7 +9,7 @@ const Content = styled.p`
 
 const Footer = () => (
   <Content>
-    &copy; 2018 by Gatsby Starter Portfolio - Emma. Pictures by{' '}
+    &copy; 2018 by Gatsby Starter Portfolio - Emilia. Pictures by{' '}
     <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">
       Unsplash
     </a>
@@ -19,7 +19,7 @@ const Footer = () => (
     </a>
     .<br />
     Have a look at the{' '}
-    <a href="https://github.com/LeKoArts/gatsby-starter-portfolio-emilia" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/LekoArts/gatsby-starter-portfolio-emilia" target="_blank" rel="noopener noreferrer">
       Github repository
     </a>
     !

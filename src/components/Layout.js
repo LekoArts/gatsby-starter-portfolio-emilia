@@ -1,7 +1,7 @@
 /* eslint no-unused-expressions: off */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectGlobal } from 'emotion';
+import { injectGlobal } from 'react-emotion';
 import { ThemeProvider } from 'emotion-theming';
 
 import { SEO, Footer } from 'components';
