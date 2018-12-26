@@ -18,19 +18,14 @@ module.exports = {
   themeColor: '#3498DB',
   backgroundColor: '#2b2e3c',
 
-  // Settings for typography.js
-  headerFontFamily: 'Fira Sans',
-  bodyFontFamily: 'Montserrat',
-  baseFontSize: '16px',
-
   // Your information
   avatar: '/logos/social.png',
   name: 'LekoArts',
   location: 'Germany',
   socialMedia: [
     {
-      url: 'https://www.facebook.com/lekoarts.de',
-      name: 'Facebook',
+      url: 'https://twitter.com/lekoarts_de',
+      name: 'Twitter',
     },
     {
       url: 'https://www.instagram.com/lekoarts.de',

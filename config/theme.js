@@ -1,5 +1,3 @@
-/* eslint quotes: off */
-
 // You can grab your own pattern here:
 // http://www.heropatterns.com/
 
@@ -18,4 +16,4 @@ module.exports = {
   },
   gridColumns: 2,
   contentPadding: '1.0875rem',
-};
+}
