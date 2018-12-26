@@ -9,14 +9,10 @@
       "classes": true
     }
   },
-  "globals": {
-    "cy": true
-  },
   "env": {
     "browser": true,
     "node": true,
-    "jquery": true,
-    "jest": true
+    "jquery": true
   },
   "rules": {
     "no-unused-vars": [

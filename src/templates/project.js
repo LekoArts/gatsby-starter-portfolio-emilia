@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
@@ -25,7 +24,6 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
 
   return (
     <Layout>
-      <Helmet title={`${project.title} | ${config.siteTitle}`} />
       <SEO postPath={slug} postNode={postNode} postSEO />
       <ProjectHeader
         avatar={config.avatar}
@@ -74,7 +72,7 @@ Project.defaultProps = {
 
 export const pageQuery = graphql`
   query ProjectPostBySlug($slug: String!, $absolutePathRegex: String!) {
-    images: allFile(filter: { absolutePath: { regex: $absolutePathRegex }, extension: { eq: "jpg" } }) {
+    images: allFile(filter: { absolutePath: { regex: $absolutePathRegex }, extension: { regex: "/(jpg)|(png)/" } }) {
       edges {
         node {
           childImageSharp {

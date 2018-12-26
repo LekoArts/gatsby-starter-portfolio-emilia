@@ -1,10 +1,13 @@
 const path = require('path')
+const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope')
 const _ = require('lodash')
+
+const wrapper = promise => promise.then(result => ({ result, error: null })).catch(error => ({ error, result: null }))
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
   let slug
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === 'Mdx') {
     if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
@@ -21,50 +24,51 @@ exports.onCreateNode = ({ node, actions }) => {
   }
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  return new Promise((resolve, reject) => {
-    const projectPage = path.resolve('src/templates/project.js')
-    resolve(
-      graphql(`
-        {
-          projects: allMarkdownRemark {
-            edges {
-              node {
-                fileAbsolutePath
-                fields {
-                  slug
-                }
+  const projectTemplate = require.resolve('./src/templates/project.js')
+
+  const { error, result } = await wrapper(
+    graphql(`
+      {
+        projects: allMdx {
+          edges {
+            node {
+              fileAbsolutePath
+              fields {
+                slug
+              }
+              code {
+                scope
               }
             }
           }
         }
-      `).then(result => {
-        if (result.errors) {
-          /* eslint no-console: "off" */
-          console.log(result.errors)
-          reject(result.errors)
-        }
+      }
+    `)
+  )
 
-        const projectPosts = result.data.projects.edges
+  if (!error) {
+    const projectPosts = result.data.projects.edges
 
-        projectPosts.forEach((edge, index) => {
-          const next = index === 0 ? null : projectPosts[index - 1].node
-          const prev = index === projectPosts.length - 1 ? null : projectPosts[index + 1].node
+    projectPosts.forEach((edge, index) => {
+      const next = index === 0 ? null : projectPosts[index - 1].node
+      const prev = index === projectPosts.length - 1 ? null : projectPosts[index + 1].node
 
-          createPage({
-            path: edge.node.fields.slug,
-            component: projectPage,
-            context: {
-              slug: edge.node.fields.slug,
-              absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
-              prev,
-              next,
-            },
-          })
-        })
+      createPage({
+        path: edge.node.fields.slug,
+        component: componentWithMDXScope(projectTemplate, edge.node.code.scope, __dirname),
+        context: {
+          slug: edge.node.fields.slug,
+          absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
+          prev,
+          next,
+        },
       })
-    )
-  })
+    })
+    return
+  }
+
+  console.log(error)
 }
