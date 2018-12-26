@@ -1,9 +1,8 @@
-import React from 'react';
-import styled from 'react-emotion';
-import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
-import { Link } from 'gatsby';
-import Overdrive from 'react-overdrive';
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
+import { Link } from 'gatsby'
 
 const CardItem = styled(Link)`
   min-height: 500px;
@@ -44,7 +43,7 @@ const CardItem = styled(Link)`
     }
     box-shadow: 0 35px 48px rgba(0, 0, 0, 0.3), 0 30px 20px rgba(0, 0, 0, 0.2);
   }
-`;
+`
 
 const Cover = styled.div`
   width: 100%;
@@ -53,7 +52,7 @@ const Cover = styled.div`
   div {
     overflow: hidden;
   }
-`;
+`
 
 const Header = styled.div`
   display: flex;
@@ -68,17 +67,17 @@ const Header = styled.div`
   ${CardItem}:hover & {
     opacity: 1;
   }
-`;
+`
 
 const DateWrapper = styled.div`
   font-size: 0.9rem;
-`;
+`
 
 const Data = styled.div`
   z-index: 10;
   position: relative;
   width: 100%;
-`;
+`
 
 const Content = styled.div`
   padding: 1rem;
@@ -89,11 +88,11 @@ const Content = styled.div`
   ${CardItem}:hover & {
     opacity: 1;
   }
-`;
+`
 
 const Areas = styled.span`
   font-size: 0.75rem;
-`;
+`
 
 const AreaItem = styled.span`
   &:not(:last-child) {
@@ -102,37 +101,35 @@ const AreaItem = styled.span`
       content: ',';
     }
   }
-`;
+`
 
 const Name = styled.h2`
   margin-top: 1.25rem;
   margin-bottom: 0;
-`;
+`
 
-const Card = ({ path, cover, date, areas, title, slug }) => (
-  <Overdrive id={`${slug}-cover`}>
-    <CardItem to={path}>
-      <Cover>
-        <Img sizes={cover} />
-      </Cover>
-      <Header>
-        <DateWrapper>{date}</DateWrapper>
-        <Areas>
-          {areas.map(area => (
-            <AreaItem key={area}>{area}</AreaItem>
-          ))}
-        </Areas>
-      </Header>
-      <Data>
-        <Content>
-          <Name>{title}</Name>
-        </Content>
-      </Data>
-    </CardItem>
-  </Overdrive>
-);
+const Card = ({ path, cover, date, areas, title }) => (
+  <CardItem to={path}>
+    <Cover>
+      <Img sizes={cover} />
+    </Cover>
+    <Header>
+      <DateWrapper>{date}</DateWrapper>
+      <Areas>
+        {areas.map(area => (
+          <AreaItem key={area}>{area}</AreaItem>
+        ))}
+      </Areas>
+    </Header>
+    <Data>
+      <Content>
+        <Name>{title}</Name>
+      </Content>
+    </Data>
+  </CardItem>
+)
 
-export default Card;
+export default Card
 
 Card.propTypes = {
   path: PropTypes.string.isRequired,
@@ -140,5 +137,4 @@ Card.propTypes = {
   date: PropTypes.string.isRequired,
   areas: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
-};
+}

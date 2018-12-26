@@ -1,13 +1,12 @@
-import React from 'react';
-import styled from 'react-emotion';
-import PropTypes from 'prop-types';
-import Overdrive from 'react-overdrive';
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const Wrapper = styled.div`
     background: url("${props => props.theme.bgPattern}") #000;
     display: flex;
     position: relative;
-`;
+`
 
 const Content = styled.div`
   margin: 0 auto;
@@ -15,7 +14,7 @@ const Content = styled.div`
   padding: 3rem 1.0875rem 10rem 1.0875rem;
   color: ${props => props.theme.colors.secondary};
   text-align: center;
-`;
+`
 
 const Avatar = styled.div`
   height: 125px;
@@ -29,19 +28,19 @@ const Avatar = styled.div`
   img {
     border-radius: 50%;
   }
-`;
+`
 
 const Name = styled.h1`
   margin: 1rem 0 0.25rem 0;
   color: ${props => props.theme.colors.color};
-`;
+`
 
 const Location = styled.div`
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const SocialMedia = styled.div`
   margin-top: 2rem;
@@ -49,19 +48,15 @@ const SocialMedia = styled.div`
   a {
     margin: 0 0.3rem;
   }
-`;
+`
 
 const Header = ({ avatar, name, location, socialMedia }) => (
   <Wrapper>
     <Content>
-      <Overdrive id="avatar-to-back">
-        <Avatar>
-          <img src={avatar} alt={name} />
-        </Avatar>
-      </Overdrive>
-      <Overdrive id="name-to-back">
-        <Name>{name}</Name>
-      </Overdrive>
+      <Avatar>
+        <img src={avatar} alt={name} />
+      </Avatar>
+      <Name>{name}</Name>
       <Location>{location}</Location>
       <SocialMedia>
         {socialMedia.map(social => (
@@ -72,13 +67,13 @@ const Header = ({ avatar, name, location, socialMedia }) => (
       </SocialMedia>
     </Content>
   </Wrapper>
-);
+)
 
-export default Header;
+export default Header
 
 Header.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   socialMedia: PropTypes.array.isRequired,
-};
+}

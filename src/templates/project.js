@@ -1,28 +1,27 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import Img from 'gatsby-image';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import Overdrive from 'react-overdrive';
-import styled from 'react-emotion';
+import React from 'react'
+import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import styled from 'styled-components'
 
-import { Layout, ProjectHeader, ProjectPagination, SEO } from 'components';
-import config from '../../config/site';
+import { Layout, ProjectHeader, ProjectPagination, SEO } from '../components'
+import config from '../../config/site'
 
 const OuterWrapper = styled.div`
   padding: 0 ${props => props.theme.contentPadding};
   margin: -6rem auto 6rem auto;
-`;
+`
 
 const InnerWrapper = styled.div`
   position: relative;
   max-width: ${props => `${props.theme.maxWidths.project}px`};
   margin: 0 auto;
-`;
+`
 
 const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode, images: imgs } }) => {
-  const images = imgs.edges;
-  const project = postNode.frontmatter;
+  const images = imgs.edges
+  const project = postNode.frontmatter
 
   return (
     <Layout>
@@ -38,9 +37,6 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
       />
       <OuterWrapper>
         <InnerWrapper>
-          <Overdrive id={`${slug}-cover`}>
-            <Img fluid={project.cover.childImageSharp.fluid} />
-          </Overdrive>
           {images.map(image => (
             <Img
               key={image.node.childImageSharp.fluid.src}
@@ -52,10 +48,10 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
         <ProjectPagination next={next} prev={prev} />
       </OuterWrapper>
     </Layout>
-  );
-};
+  )
+}
 
-export default Project;
+export default Project
 
 Project.propTypes = {
   pageContext: PropTypes.shape({
@@ -67,25 +63,23 @@ Project.propTypes = {
     project: PropTypes.object.isRequired,
     images: PropTypes.object.isRequired,
   }).isRequired,
-};
+}
 
 Project.defaultProps = {
   pageContext: PropTypes.shape({
     next: null,
     prev: null,
   }),
-};
+}
 
 export const pageQuery = graphql`
-  query ProjectPostBySlug($slug: String!, $absolutePathRegex: String!, $absolutePathCover: String!) {
-    images: allFile(
-      filter: { absolutePath: { ne: $absolutePathCover, regex: $absolutePathRegex }, extension: { eq: "jpg" } }
-    ) {
+  query ProjectPostBySlug($slug: String!, $absolutePathRegex: String!) {
+    images: allFile(filter: { absolutePath: { regex: $absolutePathRegex }, extension: { eq: "jpg" } }) {
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 1600, quality: 90, traceSVG: { color: "#328bff" }) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fluid(maxWidth: 1600, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -97,9 +91,6 @@ export const pageQuery = graphql`
       frontmatter {
         cover {
           childImageSharp {
-            fluid(maxWidth: 1600, quality: 90, traceSVG: { color: "#328bff" }) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
             resize(width: 800) {
               src
             }
@@ -111,4 +102,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

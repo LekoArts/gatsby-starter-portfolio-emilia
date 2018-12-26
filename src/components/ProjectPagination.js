@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'react-emotion';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
-import arrowLeft from '../images/left-chevron.svg';
-import arrowRight from '../images/right-chevron.svg';
+import arrowLeft from '../images/left-chevron.svg'
+import arrowRight from '../images/right-chevron.svg'
 
 const Wrapper = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     font-size: 1.25rem;
   }
   justify-items: center;
-`;
+`
 
 const Prev = styled.div`
   img {
@@ -25,7 +25,7 @@ const Prev = styled.div`
     height: 25px;
     margin: 0 1rem 0 0;
   }
-`;
+`
 
 const Next = styled.div`
   img {
@@ -34,7 +34,7 @@ const Next = styled.div`
     margin: 0 0 0 1rem;
   }
   margin-left: auto;
-`;
+`
 
 const ProjectPagination = ({ next, prev }) => (
   <Wrapper>
@@ -56,16 +56,16 @@ const ProjectPagination = ({ next, prev }) => (
       </Next>
     )}
   </Wrapper>
-);
+)
 
-export default ProjectPagination;
+export default ProjectPagination
 
 ProjectPagination.propTypes = {
   next: PropTypes.object,
   prev: PropTypes.object,
-};
+}
 
 ProjectPagination.defaultProps = {
   next: null,
   prev: null,
-};
+}

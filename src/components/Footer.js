@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'react-emotion';
+import React from 'react'
+import styled from 'styled-components'
 
 const Content = styled.p`
   color: ${props => props.theme.colors.secondary};
   padding: 0 ${props => props.theme.contentPadding};
   text-align: center;
-`;
+`
 
 const Footer = () => (
   <Content>
@@ -14,7 +14,7 @@ const Footer = () => (
       Unsplash
     </a>
     . Design by{' '}
-    <a href="https://www.lekoarts.de" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.lekoarts.de/en" target="_blank" rel="noopener noreferrer">
       LekoArts
     </a>
     .<br />
@@ -24,6 +24,6 @@ const Footer = () => (
     </a>
     !
   </Content>
-);
+)
 
-export default Footer;
+export default Footer

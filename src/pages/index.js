@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import styled from 'react-emotion';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import styled from 'styled-components'
 
-import { Card, Header, Layout } from 'components';
-import config from '../../config/site';
+import { Card, Header, Layout } from '../components'
+import config from '../../config/site'
 
 const Grid = styled.div`
   display: grid;
@@ -19,14 +19,14 @@ const Grid = styled.div`
   .gatsby-image-wrapper {
     position: static !important;
   }
-`;
+`
 
 const Content = styled.div`
   margin: -6rem auto 6rem auto;
   max-width: ${props => props.theme.maxWidths.general};
   padding: 0 ${props => props.theme.contentPadding} 1.45rem;
   position: relative;
-`;
+`
 
 const Index = ({
   data: {
@@ -44,16 +44,15 @@ const Index = ({
             cover={project.node.frontmatter.cover.childImageSharp.fluid}
             path={project.node.fields.slug}
             areas={project.node.frontmatter.areas}
-            slug={project.node.fields.slug}
             key={project.node.fields.slug}
           />
         ))}
       </Grid>
     </Content>
   </Layout>
-);
+)
 
-export default Index;
+export default Index
 
 Index.propTypes = {
   data: PropTypes.shape({
@@ -61,7 +60,7 @@ Index.propTypes = {
       edges: PropTypes.array.isRequired,
     }),
   }).isRequired,
-};
+}
 
 export const pageQuery = graphql`
   query HomeQuery {
@@ -74,8 +73,8 @@ export const pageQuery = graphql`
           frontmatter {
             cover {
               childImageSharp {
-                fluid(maxWidth: 850, quality: 90, traceSVG: { color: "#328bff" }) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                fluid(maxWidth: 850, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
@@ -87,4 +86,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

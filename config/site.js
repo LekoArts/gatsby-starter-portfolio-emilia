@@ -5,7 +5,7 @@ module.exports = {
   siteTitleAlt: 'Emilia - Gatsby Starter Portfolio', // Alternative Site title for SEO
   siteUrl: 'https://portfolio-emilia.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
+  siteLogo: '/logos/logo.png', // Used for SEO and manifest
   siteDescription: 'Dark One-Page portfolio with cards & detailed project views',
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
@@ -19,7 +19,7 @@ module.exports = {
   backgroundColor: '#2b2e3c',
 
   // Your information
-  avatar: '/logos/social.png',
+  avatar: '/logos/lekoarts.png',
   name: 'LekoArts',
   location: 'Germany',
   socialMedia: [
@@ -32,4 +32,4 @@ module.exports = {
       name: 'Instagram',
     },
   ],
-};
+}

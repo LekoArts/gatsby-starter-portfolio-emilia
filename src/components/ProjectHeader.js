@@ -1,16 +1,15 @@
-import React from 'react';
-import styled from 'react-emotion';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import Overdrive from 'react-overdrive';
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
-import arrow from '../images/left-chevron.svg';
+import arrow from '../images/left-chevron.svg'
 
 const Wrapper = styled.div`
-    background: url("${props => props.theme.bgPattern}") #000;
-    display: flex;
-    position: relative;
-`;
+  background: ${`url("${props => props.theme.bgPattern}") #000`};
+  display: flex;
+  position: relative;
+`
 
 const Content = styled.div`
   margin: 0 auto;
@@ -18,7 +17,7 @@ const Content = styled.div`
   max-width: ${props => props.theme.maxWidths.general};
   padding: 2rem 1.0875rem 16rem 1.0875rem;
   color: ${props => props.theme.colors.secondary};
-`;
+`
 
 const Back = styled(Link)`
   display: flex;
@@ -31,7 +30,7 @@ const Back = styled(Link)`
     height: 25px;
     margin: 0 1rem 0 0;
   }
-`;
+`
 
 const Avatar = styled.div`
   height: 40px;
@@ -44,12 +43,12 @@ const Avatar = styled.div`
   img {
     border-radius: 50%;
   }
-`;
+`
 
 const Name = styled.h4`
   margin: 0 0 0 1rem;
   color: ${props => props.theme.colors.color};
-`;
+`
 
 const Details = styled.div`
   width: 100%;
@@ -68,27 +67,23 @@ const Details = styled.div`
       }
     }
   }
-`;
+`
 
 const Text = styled.div`
   max-width: 750px;
   margin: 4rem auto 2rem auto;
   color: white;
-`;
+`
 
 const ProjectHeader = ({ avatar, name, title, date, areas, text }) => (
   <Wrapper>
     <Content>
       <Back to="/">
         <img src={arrow} data-info="back" alt="test" />
-        <Overdrive id="avatar-to-back">
-          <Avatar>
-            <img src={avatar} alt={name} />
-          </Avatar>
-        </Overdrive>
-        <Overdrive id="name-to-back">
-          <Name>{name}</Name>
-        </Overdrive>
+        <Avatar>
+          <img src={avatar} alt={name} />
+        </Avatar>
+        <Name>{name}</Name>
       </Back>
       <Details>
         <h1>{title}</h1>
@@ -102,9 +97,9 @@ const ProjectHeader = ({ avatar, name, title, date, areas, text }) => (
       </Details>
     </Content>
   </Wrapper>
-);
+)
 
-export default ProjectHeader;
+export default ProjectHeader
 
 ProjectHeader.propTypes = {
   avatar: PropTypes.string.isRequired,
@@ -113,4 +108,4 @@ ProjectHeader.propTypes = {
   date: PropTypes.string.isRequired,
   areas: PropTypes.array.isRequired,
   text: PropTypes.string.isRequired,
-};
+}

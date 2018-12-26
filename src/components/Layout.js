@@ -1,13 +1,12 @@
 /* eslint no-unused-expressions: off */
-import React from 'react';
-import PropTypes from 'prop-types';
-import { injectGlobal } from 'react-emotion';
-import { ThemeProvider } from 'emotion-theming';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
-import { SEO, Footer } from 'components';
-import theme from '../../config/theme';
+import { SEO, Footer } from './index'
+import theme from '../../config/theme'
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   body {
     background: ${theme.colors.bg};
     color: ${theme.colors.color};
@@ -29,20 +28,21 @@ injectGlobal`
   .gatsby-resp-image-wrapper {
     margin: 2.75rem 0;
   }
-`;
+`
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
-    <React.Fragment>
+    <>
       <SEO />
+      <GlobalStyle />
       {children}
       <Footer />
-    </React.Fragment>
+    </>
   </ThemeProvider>
-);
+)
 
-export default Layout;
+export default Layout
 
 Layout.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,
-};
+}
