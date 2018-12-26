@@ -15,11 +15,12 @@ A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience
 
 ## Why?
 
-If you want to quickly bootstrap a design/photography portfolio or use it as a foundation for your personal site the *gatsby-starter-portfolio* are a perfect fit for you! The project's goal is to offer minimalistic and fast websites. 
+If you want to quickly bootstrap a design/photography portfolio or use it as a foundation for your personal site the _gatsby-starter-portfolio_ are a perfect fit for you! The project's goal is to offer minimalistic and fast websites.
 
 I hope you like my starters and create something awesome! To see some of my work you can visit my [website](https://www.lekoarts.de) or support me on [Patreon](https://www.patreon.com/lekoarts) to get some neat rewards (4K images, project files, tutorial insights). Every pledge on Patreon helps me creating more free starters!
 
-Also check out the other *gatsby-starter-portfolio*:
+Also check out the other _gatsby-starter-portfolio_:
+
 - [gatsby-starter-portfolio-emma](https://github.com/LeKoArts/gatsby-starter-portfolio-emma)
 - [gatsby-starter-portfolio-bella](https://github.com/LeKoArts/gatsby-starter-portfolio-bella)
 - [gatsby-starter-portfolio-cara](https://github.com/LeKoArts/gatsby-starter-portfolio-cara)
@@ -30,9 +31,9 @@ Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfol
 
 - Gatsby v2.0.0
 - Configurable
-    - Use the site.js to easily change the most important information
-    - Google Fonts
-    - Use the theme.js to configure your CSS
+  - Use the site.js to easily change the most important information
+  - Google Fonts
+  - Use the theme.js to configure your CSS
 - Projects in Markdown
 - Element Transitions with [React Overdrive](https://github.com/berzniz/react-overdrive)
 - Image Grid with CSS Grid
@@ -40,21 +41,22 @@ Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfol
 - Emotion
 - Google Analytics Support
 - SEO
-    - Sitemap
-    - Schema.org JSONLD
-    - OpenGraph Tags
-    - Twitter Tags
+  - Sitemap
+  - Schema.org JSONLD
+  - OpenGraph Tags
+  - Twitter Tags
 - Offline Support
 - WebApp Manifest Support
 - Typography.js
 - Responsive images
-    - The right image size for every screen size
-    - Traced SVG Loading (Lazy-Loading)
-    - WebP Support
+  - The right image size for every screen size
+  - Traced SVG Loading (Lazy-Loading)
+  - WebP Support
 
 ## Getting Started
 
 Check your development environment! You'll need [Node.js](https://nodejs.org/en/), the [Gatsby CLI](https://www.gatsbyjs.org/docs/) and [node-gyp](https://github.com/nodejs/node-gyp#installation) installed. The official Gatsby website also lists two articles regarding this topic:
+
 - [Gatsby on Windows](https://www.gatsbyjs.org/docs/gatsby-on-windows/)
 - [Check your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)
 
@@ -67,7 +69,8 @@ npm run dev
 ```
 
 ### Adding a new project
-- Create a new folder in ``content/projects`` with the current date (Format: YYYY-MM-DD)
+
+- Create a new folder in `content/projects` with the current date (Format: YYYY-MM-DD)
 - Create a new markdown file, add the frontmatter (use the same date format)
 - Add text under the frontmatter (will be placed before the images)
 - Add your images in the folder (they will automatically be placed in the document)
@@ -83,11 +86,12 @@ You can add other features by having a look at the official [plugins page](https
 ```
 npm run build
 ```
-Copy the content of the ``public`` folder to your webhost or use a website like Netlify which automates that for you.
+
+Copy the content of the `public` folder to your webhost or use a website like Netlify which automates that for you.
 
 ## Configuration
 
-You can configure your setup in ``config/site.js``:
+You can configure your setup in `config/site.js`:
 
 ```JS
 module.exports = {
@@ -132,7 +136,7 @@ module.exports = {
 };
 ```
 
-You can also configure the styling by editing the ``config/theme.js`` file:
+You can also configure the styling by editing the `config/theme.js` file:
 
 ```JS
 // You can grab your own pattern here:
@@ -156,4 +160,4 @@ module.exports = {
 };
 ```
 
-**Attention:** You also need to edit ``static/robots.txt`` to include your domain!
+**Attention:** You also need to edit `static/robots.txt` to include your domain!
