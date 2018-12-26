@@ -29,16 +29,13 @@ Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfol
 
 ## Features
 
-- Gatsby v2.0.0
 - Configurable
   - Use the site.js to easily change the most important information
-  - Google Fonts
   - Use the theme.js to configure your CSS
-- Projects in Markdown
-- Element Transitions with [React Overdrive](https://github.com/berzniz/react-overdrive)
+- Projects in MDX ([gatsby-mdx](https://github.com/ChristopherBiscardi/gatsby-mdx))
 - Image Grid with CSS Grid
 - [HeroPatterns](http://www.heropatterns.com/) Header
-- Emotion
+- Styled Components
 - Google Analytics Support
 - SEO
   - Sitemap
@@ -47,7 +44,6 @@ Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfol
   - Twitter Tags
 - Offline Support
 - WebApp Manifest Support
-- Typography.js
 - Responsive images
   - The right image size for every screen size
   - Traced SVG Loading (Lazy-Loading)
@@ -63,17 +59,17 @@ Check your development environment! You'll need [Node.js](https://nodejs.org/en/
 To copy and install this starter run this command (with "project-name" being the name of your folder you wish to install it in):
 
 ```
-gatsby new project-name https://github.com/LeKoArts/gatsby-starter-portfolio-emilia
+gatsby new project-name https://github.com/LekoArts/gatsby-starter-portfolio-emilia
 cd project-name
 npm run dev
 ```
 
 ### Adding a new project
 
-- Create a new folder in `content/projects` with the current date (Format: YYYY-MM-DD)
-- Create a new markdown file, add the frontmatter (use the same date format)
-- Add text under the frontmatter (will be placed before the images)
-- Add your images in the folder (they will automatically be placed in the document)
+- Create a new folder in `content/projects`
+- Create a new MDX file, add the frontmatter (use the same date format)
+- Optional: Add text under the frontmatter (will be placed before the images)
+- Add your images in the folder (they will automatically be placed in the document). **Format:** JPG/PNG
 
 If you're still unsure have a look at the already existing examples.
 
@@ -101,7 +97,7 @@ module.exports = {
   siteTitleAlt: 'Emilia - Gatsby Starter Portfolio', // Alternative Site title for SEO
   siteUrl: 'https://portfolio-emilia.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
+  siteLogo: '/logos/logo.png', // Used for SEO and manifest
   siteDescription: 'Dark One-Page portfolio with cards & detailed project views',
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
@@ -114,26 +110,21 @@ module.exports = {
   themeColor: '#3498DB',
   backgroundColor: '#2b2e3c',
 
-  // Settings for typography.js
-  headerFontFamily: 'Fira Sans',
-  bodyFontFamily: 'Montserrat',
-  baseFontSize: '16px',
-
   // Your information
-  avatar: '/logos/social.png',
+  avatar: '/logos/lekoarts.png',
   name: 'LekoArts',
   location: 'Germany',
   socialMedia: [
     {
-      url: 'https://www.facebook.com/lekoarts.de',
-      name: 'Facebook',
+      url: 'https://twitter.com/lekoarts_de',
+      name: 'Twitter',
     },
     {
       url: 'https://www.instagram.com/lekoarts.de',
       name: 'Instagram',
     },
   ],
-};
+}
 ```
 
 You can also configure the styling by editing the `config/theme.js` file:
@@ -157,7 +148,7 @@ module.exports = {
   },
   gridColumns: 2,
   contentPadding: '1.0875rem',
-};
+}
 ```
 
 **Attention:** You also need to edit `static/robots.txt` to include your domain!

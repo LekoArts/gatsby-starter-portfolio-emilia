@@ -30,7 +30,7 @@ const Content = styled.div`
 
 const Index = ({
   data: {
-    allMarkdownRemark: { edges },
+    allMdx: { edges },
   },
 }) => (
   <Layout>
@@ -56,7 +56,7 @@ export default Index
 
 Index.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allMdx: PropTypes.shape({
       edges: PropTypes.array.isRequired,
     }),
   }).isRequired,
@@ -64,7 +64,7 @@ Index.propTypes = {
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           fields {

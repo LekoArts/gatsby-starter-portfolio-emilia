@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 
 import arrow from '../images/left-chevron.svg'
 
@@ -93,7 +94,11 @@ const ProjectHeader = ({ avatar, name, title, date, areas, text }) => (
             <span key={area}>{area}</span>
           ))}
         </div>
-        {text && <Text dangerouslySetInnerHTML={{ __html: text }} />}
+        {text && (
+          <Text>
+            <MDXRenderer>{text}</MDXRenderer>
+          </Text>
+        )}
       </Details>
     </Content>
   </Wrapper>

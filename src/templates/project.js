@@ -31,7 +31,7 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
         date={project.date}
         title={project.title}
         areas={project.areas}
-        text={postNode.html}
+        text={postNode.code.body}
       />
       <OuterWrapper>
         <InnerWrapper>
@@ -71,7 +71,7 @@ Project.defaultProps = {
 }
 
 export const pageQuery = graphql`
-  query ProjectPostBySlug($slug: String!, $absolutePathRegex: String!) {
+  query($slug: String!, $absolutePathRegex: String!) {
     images: allFile(filter: { absolutePath: { regex: $absolutePathRegex }, extension: { regex: "/(jpg)|(png)/" } }) {
       edges {
         node {
@@ -83,8 +83,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    project: markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    project: mdx(fields: { slug: { eq: $slug } }) {
+      code {
+        body
+      }
       excerpt
       frontmatter {
         cover {
