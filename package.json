@@ -55,7 +55,7 @@
     "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.15.3"
   },
-  "homepage": "https://github.com/LekoArts/gatsby-starter-portfolio-emilia#readme",
+  "homepage": "https://emilia.lekoarts.de",
   "bugs": {
     "url": "https://github.com/LekoArts/gatsby-starter-portfolio-emilia/issues"
   },

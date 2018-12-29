@@ -4,7 +4,7 @@ module.exports = {
   siteTitle: 'Emilia', // Navigation and Site Title
   siteTitleAlt: 'Emilia - Gatsby Starter Portfolio', // Alternative Site title for SEO
   siteTitleShort: 'Emilia', // short_name for manifest
-  siteUrl: 'https://portfolio-emilia.netlify.com', // Domain of your site. No trailing slash!
+  siteUrl: 'https://emilia.lekoarts.de', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
   siteDescription: 'Dark One-Page portfolio with cards & detailed project views',
