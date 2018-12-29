@@ -10,7 +10,7 @@ import config from '../../config/site'
 const BG = styled.div`
   background-color: ${props => props.theme.colors.bg};
   position: relative;
-  padding: 2rem 0 3rem 0;
+  padding: 2rem 0 0 0;
 `
 
 const OuterWrapper = styled.div`
@@ -46,7 +46,7 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
               <Img
                 key={image.node.childImageSharp.fluid.src}
                 fluid={image.node.childImageSharp.fluid}
-                style={{ margin: '2.75rem 0' }}
+                style={{ margin: '3rem 0' }}
               />
             ))}
           </InnerWrapper>

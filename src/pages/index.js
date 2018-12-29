@@ -22,7 +22,7 @@ const Grid = styled.div`
 `
 
 const Content = styled.div`
-  margin: -6rem auto 3rem auto;
+  margin: -6rem auto 0 auto;
   max-width: ${props => props.theme.maxWidths.general};
   padding: 0 ${props => props.theme.contentPadding} 6rem;
   position: relative;

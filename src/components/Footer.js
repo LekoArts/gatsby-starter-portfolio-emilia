@@ -3,11 +3,11 @@ import styled from 'styled-components'
 
 const Content = styled.footer`
   color: ${props => props.theme.colors.secondary};
-  padding: 0 ${props => props.theme.contentPadding};
   text-align: center;
   font-size: 0.9rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: ${props => props.theme.colors.dark_bg};
 `
 
 const Footer = () => (
