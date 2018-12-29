@@ -7,9 +7,15 @@ import styled from 'styled-components'
 import { Layout, ProjectHeader, ProjectPagination, SEO } from '../components'
 import config from '../../config/site'
 
+const BG = styled.div`
+  background-color: ${props => props.theme.colors.bg};
+  position: relative;
+  padding: 2rem 0 3rem 0;
+`
+
 const OuterWrapper = styled.div`
   padding: 0 ${props => props.theme.contentPadding};
-  margin: -6rem auto 6rem auto;
+  margin: -10rem auto 0 auto;
 `
 
 const InnerWrapper = styled.div`
@@ -33,18 +39,20 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
         areas={project.areas}
         text={postNode.code.body}
       />
-      <OuterWrapper>
-        <InnerWrapper>
-          {images.map(image => (
-            <Img
-              key={image.node.childImageSharp.fluid.src}
-              fluid={image.node.childImageSharp.fluid}
-              style={{ margin: '2.75rem 0' }}
-            />
-          ))}
-        </InnerWrapper>
-        <ProjectPagination next={next} prev={prev} />
-      </OuterWrapper>
+      <BG>
+        <OuterWrapper>
+          <InnerWrapper>
+            {images.map(image => (
+              <Img
+                key={image.node.childImageSharp.fluid.src}
+                fluid={image.node.childImageSharp.fluid}
+                style={{ margin: '2.75rem 0' }}
+              />
+            ))}
+          </InnerWrapper>
+          <ProjectPagination next={next} prev={prev} />
+        </OuterWrapper>
+      </BG>
     </Layout>
   )
 }

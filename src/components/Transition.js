@@ -1,26 +1,20 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
 import { Transition as SpringTransition, animated } from 'react-spring'
 
 class Transition extends PureComponent {
   render() {
-    const { children, location } = this.props
-
     return (
       <SpringTransition
-        items={location}
-        keys={l => l.pathname}
+        items={[this.props]}
+        keys={props => props.location.pathname}
         native
-        unique
-        initial={{ opacity: 0 }}
-        from={{ opacity: 0 }}
-        enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}
+        from={{ opacity: 0, transform: 'translateY(60px)' }}
+        enter={{ opacity: 1, transform: 'translateY(0px)' }}
+        leave={{ opacity: 0, transform: 'translateY(30px)' }}
       >
-        {(l, state) => props => (
-          <animated.div key={l.pathname} style={props}>
+        {({ pathname, children }) => props => (
+          <animated.div key={pathname} style={{ ...props, position: 'relative' }}>
             {children}
-            {console.log(state)}
           </animated.div>
         )}
       </SpringTransition>
@@ -29,8 +23,3 @@ class Transition extends PureComponent {
 }
 
 export default Transition
-
-Transition.propTypes = {
-  children: PropTypes.node.isRequired,
-  location: PropTypes.object.isRequired,
-}

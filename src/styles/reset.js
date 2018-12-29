@@ -70,7 +70,6 @@ const reset = css`
   }
   body {
     color: ${theme.colors.color};
-    background-color: ${theme.colors.bg};
   }
   ::selection {
     color: ${theme.colors.white};

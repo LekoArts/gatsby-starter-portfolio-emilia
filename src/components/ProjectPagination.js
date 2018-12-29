@@ -9,7 +9,7 @@ import arrowRight from '../images/right-chevron.svg'
 const Wrapper = styled.div`
   display: flex;
   max-width: ${props => props.theme.maxWidths.general};
-  margin: 6rem auto;
+  margin: 3rem auto;
   a {
     color: ${props => props.theme.colors.color};
     display: flex;

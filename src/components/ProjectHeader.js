@@ -7,7 +7,6 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import arrow from '../images/left-chevron.svg'
 
 const Wrapper = styled.div`
-  background: url("${props => props.theme.bgPattern}") #000;
   display: flex;
   position: relative;
 `

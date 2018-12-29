@@ -22,10 +22,14 @@ const Grid = styled.div`
 `
 
 const Content = styled.div`
-  margin: -6rem auto 6rem auto;
+  margin: -6rem auto 3rem auto;
   max-width: ${props => props.theme.maxWidths.general};
-  padding: 0 ${props => props.theme.contentPadding} 1.45rem;
+  padding: 0 ${props => props.theme.contentPadding} 6rem;
   position: relative;
+`
+
+const BG = styled.div`
+  background-color: ${props => props.theme.colors.bg};
 `
 
 const Index = ({
@@ -35,20 +39,22 @@ const Index = ({
 }) => (
   <Layout>
     <Header avatar={config.avatar} name={config.name} location={config.location} socialMedia={config.socialMedia} />
-    <Content>
-      <Grid>
-        {edges.map(project => (
-          <Card
-            date={project.node.frontmatter.date}
-            title={project.node.frontmatter.title}
-            cover={project.node.frontmatter.cover.childImageSharp.fluid}
-            path={project.node.fields.slug}
-            areas={project.node.frontmatter.areas}
-            key={project.node.fields.slug}
-          />
-        ))}
-      </Grid>
-    </Content>
+    <BG>
+      <Content>
+        <Grid>
+          {edges.map(project => (
+            <Card
+              date={project.node.frontmatter.date}
+              title={project.node.frontmatter.title}
+              cover={project.node.frontmatter.cover.childImageSharp.fluid}
+              path={project.node.fields.slug}
+              areas={project.node.frontmatter.areas}
+              key={project.node.fields.slug}
+            />
+          ))}
+        </Grid>
+      </Content>
+    </BG>
   </Layout>
 )
 
