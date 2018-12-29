@@ -1,4 +1,3 @@
 User-agent: *
-Disallow:
 
 sitemap: https://portfolio-emilia.netlify.com/sitemap.xml

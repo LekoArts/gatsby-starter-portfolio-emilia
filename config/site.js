@@ -3,9 +3,10 @@ module.exports = {
 
   siteTitle: 'Emilia', // Navigation and Site Title
   siteTitleAlt: 'Emilia - Gatsby Starter Portfolio', // Alternative Site title for SEO
+  siteTitleShort: 'Emilia', // short_name for manifest
   siteUrl: 'https://portfolio-emilia.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
+  siteLogo: '/logos/logo.png', // Used for SEO and manifest
   siteDescription: 'Dark One-Page portfolio with cards & detailed project views',
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
@@ -18,23 +19,22 @@ module.exports = {
   themeColor: '#3498DB',
   backgroundColor: '#2b2e3c',
 
-  // Settings for typography.js
-  headerFontFamily: 'Fira Sans',
-  bodyFontFamily: 'Montserrat',
-  baseFontSize: '16px',
-
   // Your information
-  avatar: '/logos/social.png',
+  avatar: '/logos/lekoarts.png',
   name: 'LekoArts',
   location: 'Germany',
   socialMedia: [
     {
-      url: 'https://www.facebook.com/lekoarts.de',
-      name: 'Facebook',
+      url: 'https://twitter.com/lekoarts_de',
+      name: 'Twitter',
     },
     {
       url: 'https://www.instagram.com/lekoarts.de',
       name: 'Instagram',
     },
+    {
+      url: 'https://www.lekoarts.de/en',
+      name: 'Homepage',
+    },
   ],
-};
+}

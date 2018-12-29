@@ -1,7 +1,6 @@
-const theme = require('./config/theme');
-const config = require('./config/site');
+const config = require('./config/site')
 
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 module.exports = {
   pathPrefix: config.pathPrefix,
@@ -10,13 +9,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-emotion',
-      options: {
-        autoLabel: process.env.NODE_ENV !== 'production',
-        labelFormat: '[filename]--[local]',
-      },
-    },
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -25,22 +18,15 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-mdx',
       options: {
-        plugins: [
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-external-links',
             options: {
               target: '_blank',
               rel: 'nofollow noopener noreferrer',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: theme.maxWidths.project,
-              quality: 90,
-              linkImagesToOriginal: false,
             },
           },
         ],
@@ -52,27 +38,15 @@ module.exports = {
         trackingId: config.googleAnalyticsID,
       },
     },
-    {
-      resolve: 'gatsby-plugin-nprogress',
-      options: {
-        color: config.themeColor,
-      },
-    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-lodash',
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography.js',
-      },
-    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: config.siteTitle,
-        short_name: config.siteTitleAlt,
+        short_name: config.siteTitleShort,
         description: config.siteDescription,
         start_url: config.pathPrefix,
         background_color: config.backgroundColor,
@@ -84,4 +58,4 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
   ],
-};
+}

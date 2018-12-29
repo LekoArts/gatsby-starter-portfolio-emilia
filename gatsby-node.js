@@ -1,85 +1,80 @@
-const path = require('path');
-const _ = require('lodash');
+const path = require('path')
+const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope')
+const _ = require('lodash')
+
+const wrapper = promise => promise.then(result => ({ result, error: null })).catch(error => ({ error, result: null }))
 
 exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions;
-  let slug;
-  if (node.internal.type === 'MarkdownRemark') {
+  const { createNodeField } = actions
+  let slug
+  // Search for MDX filenodes
+  if (node.internal.type === 'Mdx') {
+    // If the frontmatter has a "slug", use it
     if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
     ) {
-      slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+      slug = `/${_.kebabCase(node.frontmatter.slug)}`
     }
+    // If not derive a slug from the "title" in the frontmatter
     if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
     ) {
-      slug = `/${_.kebabCase(node.frontmatter.title)}`;
+      slug = `/${_.kebabCase(node.frontmatter.title)}`
     }
-    createNodeField({ node, name: 'slug', value: slug });
+    createNodeField({ node, name: 'slug', value: slug })
   }
-};
+}
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
 
-  return new Promise((resolve, reject) => {
-    const projectPage = path.resolve('src/templates/project.js');
-    resolve(
-      graphql(`
-        {
-          projects: allMarkdownRemark {
-            edges {
-              node {
-                fileAbsolutePath
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                  cover {
-                    absolutePath
-                  }
-                }
+  const projectTemplate = require.resolve('./src/templates/project.js')
+
+  const { error, result } = await wrapper(
+    graphql(`
+      {
+        projects: allMdx {
+          edges {
+            node {
+              fileAbsolutePath
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+              code {
+                scope
               }
             }
           }
         }
-      `).then(result => {
-        if (result.errors) {
-          /* eslint no-console: "off" */
-          console.log(result.errors);
-          reject(result.errors);
-        }
+      }
+    `)
+  )
 
-        const projectPosts = result.data.projects.edges;
+  if (!error) {
+    const projectPosts = result.data.projects.edges
 
-        projectPosts.forEach((edge, index) => {
-          const next = index === 0 ? null : projectPosts[index - 1].node;
-          const prev = index === projectPosts.length - 1 ? null : projectPosts[index + 1].node;
+    projectPosts.forEach((edge, index) => {
+      const next = index === 0 ? null : projectPosts[index - 1].node
+      const prev = index === projectPosts.length - 1 ? null : projectPosts[index + 1].node
 
-          createPage({
-            path: edge.node.fields.slug,
-            component: projectPage,
-            context: {
-              slug: edge.node.fields.slug,
-              absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
-              absolutePathCover: edge.node.frontmatter.cover.absolutePath,
-              prev,
-              next,
-            },
-          });
-        });
+      createPage({
+        path: edge.node.fields.slug,
+        component: componentWithMDXScope(projectTemplate, edge.node.code.scope, __dirname),
+        context: {
+          slug: edge.node.fields.slug,
+          absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
+          prev,
+          next,
+        },
       })
-    );
-  });
-};
+    })
+    return
+  }
 
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    },
-  });
-};
+  console.log(error)
+}
