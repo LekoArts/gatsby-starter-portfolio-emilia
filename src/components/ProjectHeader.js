@@ -7,7 +7,7 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import arrow from '../images/left-chevron.svg'
 
 const Wrapper = styled.div`
-  background: ${`url("${props => props.theme.bgPattern}") #000`};
+  background: url("${props => props.theme.bgPattern}") #000;
   display: flex;
   position: relative;
 `
@@ -27,15 +27,15 @@ const Back = styled(Link)`
   justify-content: flex-start;
 
   img[data-info='back'] {
-    width: 25px;
-    height: 25px;
+    width: 1.5rem;
+    height: 1.5rem;
     margin: 0 1rem 0 0;
   }
 `
 
 const Avatar = styled.div`
-  height: 40px;
-  width: 40px;
+  height: 3rem;
+  width: 3rem;
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
@@ -43,6 +43,8 @@ const Avatar = styled.div`
 
   img {
     border-radius: 50%;
+    height: auto;
+    width: 100%;
   }
 `
 
@@ -59,15 +61,6 @@ const Details = styled.div`
   h1 {
     color: ${props => props.theme.colors.color};
   }
-
-  span {
-    &:not(:last-child) {
-      margin-right: 0.25rem;
-      &:after {
-        content: ',';
-      }
-    }
-  }
 `
 
 const Text = styled.div`
@@ -80,7 +73,7 @@ const ProjectHeader = ({ avatar, name, title, date, areas, text }) => (
   <Wrapper>
     <Content>
       <Back to="/">
-        <img src={arrow} data-info="back" alt="test" />
+        <img src={arrow} data-info="back" alt="Back to home" aria-label="Back to home" />
         <Avatar>
           <img src={avatar} alt={name} />
         </Avatar>
@@ -90,8 +83,11 @@ const ProjectHeader = ({ avatar, name, title, date, areas, text }) => (
         <h1>{title}</h1>
         <p>{date}</p>
         <div>
-          {areas.map(area => (
-            <span key={area}>{area}</span>
+          {areas.map((area, index) => (
+            <React.Fragment key={area}>
+              {index > 0 && ', '}
+              {area}
+            </React.Fragment>
           ))}
         </div>
         {text && (

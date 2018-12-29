@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Content = styled.p`
+const Content = styled.footer`
   color: ${props => props.theme.colors.secondary};
   padding: 0 ${props => props.theme.contentPadding};
   text-align: center;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 `
 
 const Footer = () => (

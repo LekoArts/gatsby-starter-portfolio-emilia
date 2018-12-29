@@ -16,4 +16,10 @@ module.exports = {
   },
   gridColumns: 2,
   contentPadding: '1.0875rem',
+  breakpoints: {
+    xs: '400px',
+    s: '600px',
+    m: '900px',
+    l: '1200px',
+  },
 }

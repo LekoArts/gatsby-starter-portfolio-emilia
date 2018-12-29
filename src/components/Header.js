@@ -3,17 +3,18 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const Wrapper = styled.div`
-    background: url("${props => props.theme.bgPattern}") #000;
-    display: flex;
-    position: relative;
+  background: url("${props => props.theme.bgPattern}") #000;
+  display: flex;
+  position: relative;
 `
 
 const Content = styled.div`
   margin: 0 auto;
   max-width: ${props => props.theme.maxWidths.general};
-  padding: 3rem 1.0875rem 10rem 1.0875rem;
+  padding: 3rem 1.0875rem 3rem 1.0875rem;
   color: ${props => props.theme.colors.secondary};
   text-align: center;
+  height: 600px;
 `
 
 const Avatar = styled.div`

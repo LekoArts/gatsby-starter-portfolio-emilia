@@ -5,24 +5,17 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 import { SEO, Footer } from './index'
 import theme from '../../config/theme'
+import reset from '../styles/reset'
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    background: ${theme.colors.bg};
-    color: ${theme.colors.color};
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  ${reset}
+  
+  html {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
-
-  a {
-    color: ${theme.colors.link};
-    transition: color .5s;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: none;
-    color: ${theme.colors.linkHover};
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
 
   .gatsby-resp-image-wrapper {
