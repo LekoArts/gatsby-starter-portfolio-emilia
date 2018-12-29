@@ -81,7 +81,10 @@ Project.defaultProps = {
 export const pageQuery = graphql`
   query($slug: String!, $absolutePathRegex: String!) {
     images: allFile(
-      filter: { absolutePath: { regex: $absolutePathRegex }, extension: { regex: "/(jpg)|(png)/" } }
+      filter: {
+        absolutePath: { regex: $absolutePathRegex }
+        extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
+      }
       sort: { fields: name, order: ASC }
     ) {
       edges {

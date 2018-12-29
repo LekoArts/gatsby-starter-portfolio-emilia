@@ -11,7 +11,7 @@ A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience
 - Focus on big images
 - Dark theme
 - Image grid powered by CSS Grid
-- One-Page layout with sub-pages for projects
+- Page Transitions & Animations
 
 ## Why?
 
@@ -21,9 +21,9 @@ I hope you like my starters and create something awesome! To see some of my work
 
 Also check out the other _gatsby-starter-portfolio_:
 
-- [gatsby-starter-portfolio-emma](https://github.com/LeKoArts/gatsby-starter-portfolio-emma)
-- [gatsby-starter-portfolio-bella](https://github.com/LeKoArts/gatsby-starter-portfolio-bella)
-- [gatsby-starter-portfolio-cara](https://github.com/LeKoArts/gatsby-starter-portfolio-cara)
+- [gatsby-starter-portfolio-emma](https://github.com/LekoArts/gatsby-starter-portfolio-emma)
+- [gatsby-starter-portfolio-bella](https://github.com/LekoArts/gatsby-starter-portfolio-bella)
+- [gatsby-starter-portfolio-cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
 
 Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfolio.netlify.com/)!
 
@@ -34,6 +34,7 @@ Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfol
   - Use the theme.js to configure your CSS
 - Projects in MDX ([gatsby-mdx](https://github.com/ChristopherBiscardi/gatsby-mdx))
 - Image Grid with CSS Grid
+- Page transitions & animations with [`react-spring`](https://github.com/react-spring/react-spring)
 - [HeroPatterns](http://www.heropatterns.com/) Header
 - Styled Components
 - Google Analytics Support
@@ -68,8 +69,8 @@ npm run dev
 
 - Create a new folder in `content/projects`
 - Create a new MDX file, add the frontmatter (use the same date format)
-- Optional: Add text under the frontmatter (will be placed before the images)
-- Add your images in the folder (they will automatically be placed in the document). **Format:** JPG/PNG
+- **Optional:** Add text under the frontmatter (will be placed before the images)
+- Add your images in the folder (they will automatically be placed in the document). **Format:** JPG/PNG/TIF/WEBP
 
 If you're still unsure have a look at the already existing examples.
 
@@ -95,6 +96,7 @@ module.exports = {
 
   siteTitle: 'Emilia', // Navigation and Site Title
   siteTitleAlt: 'Emilia - Gatsby Starter Portfolio', // Alternative Site title for SEO
+  siteTitleShort: 'Emilia', // short_name for manifest
   siteUrl: 'https://portfolio-emilia.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
@@ -123,6 +125,10 @@ module.exports = {
       url: 'https://www.instagram.com/lekoarts.de',
       name: 'Instagram',
     },
+    {
+      url: 'https://www.lekoarts.de/en',
+      name: 'Homepage',
+    },
   ],
 }
 ```
@@ -138,6 +144,7 @@ module.exports = {
   colors: {
     bg: '#16191f',
     color: 'white',
+    dark_bg: 'black',
     secondary: '#b6b6b6',
     link: '#328bff',
     linkHover: '#79a8ff',
@@ -146,8 +153,14 @@ module.exports = {
     general: '1600px',
     project: 1600,
   },
-  gridColumns: 2,
+  gridColumns: 2, // Number of columns of the grid on the index page
   contentPadding: '1.0875rem',
+  breakpoints: {
+    xs: '400px',
+    s: '600px',
+    m: '900px',
+    l: '1200px',
+  },
 }
 ```
 

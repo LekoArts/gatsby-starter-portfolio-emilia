@@ -15,7 +15,7 @@ module.exports = {
     general: '1600px',
     project: 1600,
   },
-  gridColumns: 2,
+  gridColumns: 2, // Number of columns of the grid on the index page
   contentPadding: '1.0875rem',
   breakpoints: {
     xs: '400px',
