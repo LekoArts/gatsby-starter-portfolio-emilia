@@ -42,6 +42,7 @@ const Layout = ({ children }) => (
     <>
       <SEO />
       <GlobalStyle />
+      <noscript>To browse this site, please enable JavaScript.</noscript>
       <AbsoluteWrapper>
         {children}
         <Footer />
