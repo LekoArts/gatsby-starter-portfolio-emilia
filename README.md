@@ -8,6 +8,8 @@ A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LeKoArts/gatsby-starter-portfolio-emilia) [![Edit gatsby-starter-portfolio-emilia](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/LekoArts/gatsby-starter-portfolio-emilia/tree/master/)
 
+[![CircleCI](https://circleci.com/gh/LekoArts/gatsby-starter-portfolio-emilia.svg?style=svg)](https://circleci.com/gh/LekoArts/gatsby-starter-portfolio-emilia)
+
 - Focus on big images
 - Dark theme
 - Image grid powered by CSS Grid
