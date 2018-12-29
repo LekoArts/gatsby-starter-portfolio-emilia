@@ -42,8 +42,9 @@ const Index = ({
     <BG>
       <Content>
         <Grid>
-          {edges.map(project => (
+          {edges.map((project, index) => (
             <Card
+              delay={index}
               date={project.node.frontmatter.date}
               title={project.node.frontmatter.title}
               cover={project.node.frontmatter.cover.childImageSharp.fluid}

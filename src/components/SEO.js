@@ -77,6 +77,7 @@ const SEO = props => {
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="image" content={image} />
+      <meta name="gatsby-starter" content="Gatsby Starter Portfolio Emilia" />
       <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
       <meta property="og:locale" content={config.ogLanguage} />
       <meta property="og:site_name" content={config.ogSiteName ? config.ogSiteName : ''} />

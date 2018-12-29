@@ -15,6 +15,9 @@ const Content = styled.div`
   color: ${props => props.theme.colors.secondary};
   text-align: center;
   height: 600px;
+  @media (max-width: ${props => props.theme.breakpoints.s}) {
+    height: 500px;
+  }
 `
 
 const Avatar = styled.div`

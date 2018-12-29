@@ -16,7 +16,7 @@ const Content = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: ${props => props.theme.maxWidths.general};
-  padding: 2rem 1.0875rem 16rem 1.0875rem;
+  padding: 2rem 1.0875rem 13rem 1.0875rem;
   color: ${props => props.theme.colors.secondary};
 `
 
@@ -77,14 +77,7 @@ const ProjectHeader = ({ avatar, name, title, date, areas, text }) => (
         <Avatar>
           <img src={avatar} alt={name} />
         </Avatar>
-        <Spring
-          native
-          config={config.slow}
-          from={{ opacity: 0, transform: 'translate3d(0, 30px, 0)' }}
-          to={{ opacity: 1, transform: 'translate3d(0, 0, 0)' }}
-        >
-          {props => <Name style={props}>{name}</Name>}
-        </Spring>
+        <Name>{name}</Name>
       </Back>
       <Details>
         <Spring

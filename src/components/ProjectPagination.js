@@ -16,6 +16,9 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     font-size: 1.25rem;
+    &:hover {
+      color: ${props => props.theme.colors.linkHover};
+    }
   }
   justify-items: center;
 `
