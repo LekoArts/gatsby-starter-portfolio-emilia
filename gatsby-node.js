@@ -1,5 +1,4 @@
 const path = require('path')
-const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope')
 const _ = require('lodash')
 
 const wrapper = promise => promise.then(result => ({ result, error: null })).catch(error => ({ error, result: null }))
@@ -45,9 +44,6 @@ exports.createPages = async ({ graphql, actions }) => {
               frontmatter {
                 title
               }
-              code {
-                scope
-              }
             }
           }
         }
@@ -64,9 +60,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
       createPage({
         path: edge.node.fields.slug,
-        component: componentWithMDXScope(projectTemplate, edge.node.code.scope, __dirname),
+        component: projectTemplate,
         context: {
           slug: edge.node.fields.slug,
+          // Pass the current directory of the project as regex in context so that the GraphQL query can filter by it
           absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
           prev,
           next,

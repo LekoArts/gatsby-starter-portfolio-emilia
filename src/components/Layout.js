@@ -37,10 +37,10 @@ const AbsoluteWrapper = styled.main`
   height: 100%;
 `
 
-const Layout = ({ children }) => (
+const Layout = ({ children, customSEO }) => (
   <ThemeProvider theme={theme}>
     <>
-      <SEO />
+      {!customSEO && <SEO />}
       <GlobalStyle />
       <noscript>To browse this site, please enable JavaScript.</noscript>
       <AbsoluteWrapper>
@@ -55,4 +55,9 @@ export default Layout
 
 Layout.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,
+  customSEO: PropTypes.bool,
+}
+
+Layout.defaultProps = {
+  customSEO: false,
 }

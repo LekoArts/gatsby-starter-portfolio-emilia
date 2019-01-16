@@ -29,7 +29,7 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
   const project = postNode.frontmatter
 
   return (
-    <Layout>
+    <Layout customSEO>
       <SEO postPath={slug} postNode={postNode} postSEO />
       <ProjectHeader
         avatar={config.avatar}
@@ -102,6 +102,12 @@ export const pageQuery = graphql`
         body
       }
       excerpt
+      parent {
+        ... on File {
+          mtime
+          birthtime
+        }
+      }
       frontmatter {
         cover {
           childImageSharp {

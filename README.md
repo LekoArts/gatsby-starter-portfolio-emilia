@@ -49,7 +49,7 @@ Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfol
 - WebApp Manifest Support
 - Responsive images
   - The right image size for every screen size
-  - Traced SVG Loading (Lazy-Loading)
+  - Image Lazy-Loading
   - WebP Support
 
 ## Getting Started
@@ -99,10 +99,12 @@ module.exports = {
   siteTitle: 'Emilia', // Navigation and Site Title
   siteTitleAlt: 'Emilia - Gatsby Starter Portfolio', // Alternative Site title for SEO
   siteTitleShort: 'Emilia', // short_name for manifest
+  siteHeadline: 'Publishing & Creating stunning photos', // Headline for schema.org JSONLD
   siteUrl: 'https://emilia.lekoarts.de', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
   siteDescription: 'Dark One-Page portfolio with cards & detailed project views',
+  author: 'LekoArts', // Author for schema.org JSONLD
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
   userTwitter: '@emilia', // Twitter Username
