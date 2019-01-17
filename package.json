@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-portfolio-emilia",
-  "description": "Gatsby Starter Portfolio Emilia",
+  "description": "Dark themed, image-heavy portfolio. Page transitions & animations. Big images & gatsby-mdx.",
   "version": "3.0.0",
   "author": "LekoArts <hello@lekoarts.de> (https://www.lekoarts.de)",
   "scripts": {
