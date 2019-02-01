@@ -1,3 +1,3 @@
-import pageElementWithTransition from './src/utils/wrapPageElement'
-
-export const wrapPageElement = pageElementWithTransition
+import React from 'react'
+// eslint-disable-next-line
+export const wrapPageElement = ({ element }) => <div>{element}</div>
