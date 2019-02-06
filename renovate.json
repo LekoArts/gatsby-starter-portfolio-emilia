@@ -27,7 +27,7 @@
   ],
   "labels": ["renovate"],
   "prHourlyLimit": 4,
-  "prConcurrentLimit": 15,
+  "prConcurrentLimit": 16,
   "prCreation": "not-pending",
   "rangeStrategy": "bump",
   "bumpVersion": null,
