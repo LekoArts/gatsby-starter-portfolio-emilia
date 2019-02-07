@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Spring, animated, config } from 'react-spring'
+import { useSpring, animated, config } from 'react-spring'
 import { rgba } from 'polished'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
@@ -65,39 +65,38 @@ const Name = styled.h2`
   margin-top: 0;
 `
 
-const Card = ({ path, cover, date, areas, title, delay }) => (
-  <Spring
-    native
-    delay={200 * delay}
-    from={{ opacity: 0, transform: 'translate3d(0, 30px, 0)' }}
-    to={{ opacity: 1, transform: 'translate3d(0, 0, 0)' }}
-    config={config.slow}
-  >
-    {props => (
-      <animated.div style={props}>
-        <CardItem to={path}>
-          <Cover>
-            <Img fluid={cover} />
-          </Cover>
-          <Content>
-            <Name>{title}</Name>
-            <Bottom>
-              <div>{date}</div>
-              <div>
-                {areas.map((area, index) => (
-                  <React.Fragment key={area}>
-                    {index > 0 && ', '}
-                    {area}
-                  </React.Fragment>
-                ))}
-              </div>
-            </Bottom>
-          </Content>
-        </CardItem>
-      </animated.div>
-    )}
-  </Spring>
-)
+const Card = ({ path, cover, date, areas, title, delay }) => {
+  const springProps = useSpring({
+    config: config.slow,
+    delay: 200 * delay,
+    from: { opacity: 0, transform: 'translate3d(0, 30px, 0)' },
+    to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
+  })
+
+  return (
+    <animated.div style={springProps}>
+      <CardItem to={path}>
+        <Cover>
+          <Img fluid={cover} />
+        </Cover>
+        <Content>
+          <Name>{title}</Name>
+          <Bottom>
+            <div>{date}</div>
+            <div>
+              {areas.map((area, index) => (
+                <React.Fragment key={area}>
+                  {index > 0 && ', '}
+                  {area}
+                </React.Fragment>
+              ))}
+            </div>
+          </Bottom>
+        </Content>
+      </CardItem>
+    </animated.div>
+  )
+}
 
 export default Card
 

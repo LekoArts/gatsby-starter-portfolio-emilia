@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { Spring, animated, config } from 'react-spring'
+import { useSpring, animated, config } from 'react-spring'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 
 import arrow from '../images/left-chevron.svg'
@@ -69,50 +69,48 @@ const Text = styled.div`
   color: white;
 `
 
-const ProjectHeader = ({ avatar, name, title, date, areas, text }) => (
-  <Wrapper>
-    <Content>
-      <Back to="/">
-        <img src={arrow} data-info="back" alt="Back to home" aria-label="Back to home" />
-        <Avatar>
-          <img src={avatar} alt={name} />
-        </Avatar>
-        <Name>{name}</Name>
-      </Back>
-      <Details>
-        <Spring
-          native
-          config={config.slow}
-          delay={200}
-          from={{ opacity: 0, transform: 'translate3d(0, 30px, 0)' }}
-          to={{ opacity: 1, transform: 'translate3d(0, 0, 0)' }}
-        >
-          {props => <animated.h1 style={props}>{title}</animated.h1>}
-        </Spring>
-        <Spring native config={config.slow} delay={600} from={{ opacity: 0 }} to={{ opacity: 1 }}>
-          {props => (
-            <animated.div style={props}>
-              <p>{date}</p>
-              <div>
-                {areas.map((area, index) => (
-                  <React.Fragment key={area}>
-                    {index > 0 && ', '}
-                    {area}
-                  </React.Fragment>
-                ))}
-              </div>
-              {text && (
-                <Text>
-                  <MDXRenderer>{text}</MDXRenderer>
-                </Text>
-              )}
-            </animated.div>
-          )}
-        </Spring>
-      </Details>
-    </Content>
-  </Wrapper>
-)
+const ProjectHeader = ({ avatar, name, title, date, areas, text }) => {
+  const titleProps = useSpring({
+    config: config.slow,
+    delay: 200,
+    from: { opacity: 0, transform: 'translate3d(0, 30px, 0)' },
+    to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
+  })
+  const contentProps = useSpring({ config: config.slow, delay: 600, from: { opacity: 0 }, to: { opacity: 1 } })
+
+  return (
+    <Wrapper>
+      <Content>
+        <Back to="/">
+          <img src={arrow} data-info="back" alt="Back to home" aria-label="Back to home" />
+          <Avatar>
+            <img src={avatar} alt={name} />
+          </Avatar>
+          <Name>{name}</Name>
+        </Back>
+        <Details>
+          <animated.h1 style={titleProps}>{title}</animated.h1>
+          <animated.div style={contentProps}>
+            <p>{date}</p>
+            <div>
+              {areas.map((area, index) => (
+                <React.Fragment key={area}>
+                  {index > 0 && ', '}
+                  {area}
+                </React.Fragment>
+              ))}
+            </div>
+            {text && (
+              <Text>
+                <MDXRenderer>{text}</MDXRenderer>
+              </Text>
+            )}
+          </animated.div>
+        </Details>
+      </Content>
+    </Wrapper>
+  )
+}
 
 export default ProjectHeader
 

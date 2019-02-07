@@ -1,25 +1,18 @@
-import React, { PureComponent } from 'react'
-import { Transition as SpringTransition, animated } from 'react-spring'
+import React from 'react'
+import { useTransition, animated } from 'react-spring'
 
-class Transition extends PureComponent {
-  render() {
-    return (
-      <SpringTransition
-        items={[this.props]}
-        keys={props => props.location.pathname}
-        native
-        from={{ opacity: 0, transform: 'translateY(60px)' }}
-        enter={{ opacity: 1, transform: 'translateY(0px)' }}
-        leave={{ opacity: 0, transform: 'translateY(30px)' }}
-      >
-        {({ pathname, children }) => props => (
-          <animated.div key={pathname} style={{ ...props, position: 'relative' }}>
-            {children}
-          </animated.div>
-        )}
-      </SpringTransition>
-    )
-  }
+const Transition = props => {
+  const transitions = useTransition([props], item => item.location.pathname, {
+    from: { opacity: 0, transform: 'translateY(60px)' },
+    enter: { opacity: 1, transform: 'translateY(0px)' },
+    leave: { opacity: 0, transform: 'translateY(30px)' },
+  })
+
+  return transitions.map(({ item, props: styles, key }) => (
+    <animated.div key={key} style={{ ...styles, position: 'relative' }}>
+      {item.children}
+    </animated.div>
+  ))
 }
 
 export default Transition
