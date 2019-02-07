@@ -9523,10 +9523,10 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
-react-spring@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.1.tgz#9896d6037bc99c24bed0fecf5ac8d0992724b7dd"
-  integrity sha512-IekJasCvYOOHk+YCtIZEqmk5C57YugzA+qWP6mXAZxEWYQ/jt3TzmTPXhtpzjPgbE+RzSVJxGEAFiVptw9vqxQ==
+react-spring@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.2.tgz#a17715908c0c0b122c9dd44aba984aa1798d66e1"
+  integrity sha512-E5dVqxwYmsCwvVfp1vdaNRB1p162hSEQZZhqSZuH+9LHDREHixApHX/kQRC1zTmS8jBoqgBILKIxbzsqykqa7g==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
