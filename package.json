@@ -34,7 +34,7 @@
     "gatsby-transformer-sharp": "^2.1.13",
     "lodash": "^4.17.11",
     "polished": "^2.3.3",
-    "prop-types": "^15.6.2",
+    "prop-types": "^15.7.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",
