@@ -1,7 +1,15 @@
 const path = require('path')
 const _ = require('lodash')
 
-const wrapper = promise => promise.then(result => ({ result, error: null })).catch(error => ({ error, result: null }))
+const wrapper = promise =>
+  promise
+    .then(result => {
+      if (result.errors) {
+        throw result.errors
+      }
+      return { result, error: null }
+    })
+    .catch(error => ({ error, result: null }))
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
