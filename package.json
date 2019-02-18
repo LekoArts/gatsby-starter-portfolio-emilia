@@ -14,8 +14,8 @@
     "lint:ci": "yarn lint --format junit -o results/eslint/result.xml"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^0.16.8",
-    "@mdx-js/tag": "0.16.8",
+    "@mdx-js/mdx": "^0.17.5",
+    "@mdx-js/tag": "0.17.5",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.118",
     "gatsby-image": "^2.0.29",
