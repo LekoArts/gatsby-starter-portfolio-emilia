@@ -1,15 +1,14 @@
 const path = require('path')
 const _ = require('lodash')
 
+// graphql function doesn't throw an error so we have to check to check for the result.errors to throw manually
 const wrapper = promise =>
-  promise
-    .then(result => {
-      if (result.errors) {
-        throw result.errors
-      }
-      return { result, error: null }
-    })
-    .catch(error => ({ error, result: null }))
+  promise.then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+    return result
+  })
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
@@ -39,7 +38,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const projectTemplate = require.resolve('./src/templates/project.js')
 
-  const { error, result } = await wrapper(
+  const result = await wrapper(
     graphql(`
       {
         projects: allMdx {
@@ -59,27 +58,22 @@ exports.createPages = async ({ graphql, actions }) => {
     `)
   )
 
-  if (!error) {
-    const projectPosts = result.data.projects.edges
+  const projectPosts = result.data.projects.edges
 
-    projectPosts.forEach((edge, index) => {
-      const next = index === 0 ? null : projectPosts[index - 1].node
-      const prev = index === projectPosts.length - 1 ? null : projectPosts[index + 1].node
+  projectPosts.forEach((edge, index) => {
+    const next = index === 0 ? null : projectPosts[index - 1].node
+    const prev = index === projectPosts.length - 1 ? null : projectPosts[index + 1].node
 
-      createPage({
-        path: edge.node.fields.slug,
-        component: projectTemplate,
-        context: {
-          slug: edge.node.fields.slug,
-          // Pass the current directory of the project as regex in context so that the GraphQL query can filter by it
-          absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
-          prev,
-          next,
-        },
-      })
+    createPage({
+      path: edge.node.fields.slug,
+      component: projectTemplate,
+      context: {
+        slug: edge.node.fields.slug,
+        // Pass the current directory of the project as regex in context so that the GraphQL query can filter by it
+        absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
+        prev,
+        next,
+      },
     })
-    return
-  }
-
-  console.log(error)
+  })
 }
