@@ -41,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await wrapper(
     graphql(`
       {
-        projects: allMdx {
+        projects: allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
           edges {
             node {
               fileAbsolutePath

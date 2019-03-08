@@ -39,6 +39,7 @@ Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfol
 - Page transitions & animations with [`react-spring`](https://github.com/react-spring/react-spring)
 - [HeroPatterns](http://www.heropatterns.com/) Header
 - Styled Components
+- Cypress for End-to-End testing
 - Google Analytics Support
 - SEO
   - Sitemap

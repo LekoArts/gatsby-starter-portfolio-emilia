@@ -44,6 +44,7 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
           <InnerWrapper>
             {images.map(image => (
               <Img
+                alt={image.node.name}
                 key={image.node.childImageSharp.fluid.src}
                 fluid={image.node.childImageSharp.fluid}
                 style={{ margin: '3rem 0' }}
@@ -89,6 +90,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          name
           childImageSharp {
             fluid(maxWidth: 1600, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
