@@ -58,3 +58,6 @@ public/
 
 # Bundle stats
 bundle-stats.json
+
+cypress/screenshots
+cypress/videos
