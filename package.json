@@ -65,7 +65,7 @@
     "eslint-plugin-react": "^7.12.4",
     "gatsby-cypress": "^0.1.7",
     "prettier": "^1.16.4",
-    "start-server-and-test": "^1.7.12"
+    "start-server-and-test": "^1.7.13"
   },
   "homepage": "https://emilia.lekoarts.de",
   "bugs": {
