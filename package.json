@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-portfolio-emilia",
-  "description": "Dark themed, image-heavy portfolio. Page transitions & animations. Big images & gatsby-mdx.",
-  "version": "3.0.0",
-  "author": "LekoArts <hello@lekoarts.de> (https://www.lekoarts.de)",
+  "name": "namedia_digital_pixart",
+  "description": "Namedia Digital Pixart Project.",
+  "version": "1.0.0",
+  "author": "Namedia Digital",
   "scripts": {
     "develop": "gatsby develop",
     "dev": "gatsby develop -o",
