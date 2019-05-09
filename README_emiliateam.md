@@ -1,5 +1,8 @@
 ![](https://i.imgur.com/xPj0ICn.png)
 
+A portfolio starter for Gatsby (Dark Theme, One-Page). The target audience are designers and photographers.
+https://emilia.lekoarts.de
+
 # Gatsby Starter Portfolio: Emilia
 
 A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience are designers and photographers.
