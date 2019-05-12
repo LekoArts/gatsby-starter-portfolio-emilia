@@ -67,7 +67,7 @@
     "prettier": "^1.17.0",
     "start-server-and-test": "^1.9.0"
   },
-  "homepage": "https://emilia.lekoarts.de",
+  "homepage": "https://pixart.namedia.digital",
   "bugs": {
     "url": "https://github.com/LekoArts/gatsby-starter-portfolio-emilia/issues"
   },
@@ -81,6 +81,6 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LekoArts/gatsby-starter-portfolio-emilia.git"
+    "url": "git+https://github.com/NamediaDigital/namedia-pixart.git"
   }
 }
