@@ -23,8 +23,8 @@ module.exports = {
 
   // Your information
   avatar: '/logos/lekoarts.png',
-  name: 'Pixart by NamediaDigital',
-  location: 'USA',
+  name: 'Pixart by Namedia Digital',
+  location: 'Las Vegas, Nevada, USA',
   socialMedia: [
     // {
     //   url: 'https://twitter.com/lekoarts_de',
