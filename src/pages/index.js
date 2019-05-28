@@ -34,7 +34,7 @@ const BG = styled.div`
 
 const Index = ({
   data: {
-    allMdx: { edges },
+    allMdx: { nodes },
   },
 }) => (
   <Layout>
@@ -42,15 +42,15 @@ const Index = ({
     <BG>
       <Content>
         <Grid>
-          {edges.map((project, index) => (
+          {nodes.map((project, index) => (
             <Card
               delay={index}
-              date={project.node.frontmatter.date}
-              title={project.node.frontmatter.title}
-              cover={project.node.frontmatter.cover.childImageSharp.fluid}
-              path={project.node.fields.slug}
-              areas={project.node.frontmatter.areas}
-              key={project.node.fields.slug}
+              date={project.frontmatter.date}
+              title={project.frontmatter.title}
+              cover={project.frontmatter.cover.childImageSharp.fluid}
+              path={project.fields.slug}
+              areas={project.frontmatter.areas}
+              key={project.fields.slug}
             />
           ))}
         </Grid>
@@ -64,7 +64,7 @@ export default Index
 Index.propTypes = {
   data: PropTypes.shape({
     allMdx: PropTypes.shape({
-      edges: PropTypes.array.isRequired,
+      nodes: PropTypes.array.isRequired,
     }),
   }).isRequired,
 }
@@ -72,23 +72,21 @@ Index.propTypes = {
 export const pageQuery = graphql`
   query HomeQuery {
     allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            cover {
-              childImageSharp {
-                fluid(maxWidth: 760, quality: 90) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          cover {
+            childImageSharp {
+              fluid(maxWidth: 760, quality: 90) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
-            date(formatString: "DD.MM.YYYY")
-            title
-            areas
           }
+          date(formatString: "DD.MM.YYYY")
+          title
+          areas
         }
       }
     }

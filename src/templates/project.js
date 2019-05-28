@@ -24,8 +24,7 @@ const InnerWrapper = styled.div`
   margin: 0 auto;
 `
 
-const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode, images: imgs } }) => {
-  const images = imgs.edges
+const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode, images } }) => {
   const project = postNode.frontmatter
 
   return (
@@ -42,11 +41,11 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
       <BG>
         <OuterWrapper>
           <InnerWrapper>
-            {images.map(image => (
+            {images.nodes.map(image => (
               <Img
-                alt={image.node.name}
-                key={image.node.childImageSharp.fluid.src}
-                fluid={image.node.childImageSharp.fluid}
+                alt={image.name}
+                key={image.childImageSharp.fluid.src}
+                fluid={image.childImageSharp.fluid}
                 style={{ margin: '3rem 0' }}
               />
             ))}
@@ -88,13 +87,11 @@ export const pageQuery = graphql`
       }
       sort: { fields: name, order: ASC }
     ) {
-      edges {
-        node {
-          name
-          childImageSharp {
-            fluid(maxWidth: 1600, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+      nodes {
+        name
+        childImageSharp {
+          fluid(maxWidth: 1600, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

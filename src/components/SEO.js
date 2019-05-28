@@ -2,11 +2,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import config from '../../config/site'
 
-const Head = props => {
-  const { postNode, postPath, postSEO, data } = props
+const SEO = ({ postNode, postPath, postSEO }) => {
+  const data = useStaticQuery(querySEO)
+
   let title
   let description
   let image
@@ -169,13 +170,10 @@ const Head = props => {
   )
 }
 
-const SEO = props => <StaticQuery query={querySEO} render={data => <Head {...props} data={data} />} />
-
 export default SEO
 
-Head.propTypes = {
+SEO.propTypes = {
   postNode: PropTypes.object,
-  data: PropTypes.any.isRequired,
   postPath: PropTypes.string,
   postSEO: PropTypes.bool,
 }

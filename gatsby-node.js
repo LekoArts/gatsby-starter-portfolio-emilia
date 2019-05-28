@@ -23,7 +23,7 @@ exports.onCreateNode = ({ node, actions }) => {
       slug = `/${_.kebabCase(node.frontmatter.slug)}`
     }
     // If not derive a slug from the "title" in the frontmatter
-    if (
+    else if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
     ) {
@@ -42,15 +42,13 @@ exports.createPages = async ({ graphql, actions }) => {
     graphql(`
       {
         projects: allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-          edges {
-            node {
-              fileAbsolutePath
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
+          nodes {
+            fileAbsolutePath
+            fields {
+              slug
+            }
+            frontmatter {
+              title
             }
           }
         }
@@ -58,19 +56,19 @@ exports.createPages = async ({ graphql, actions }) => {
     `)
   )
 
-  const projectPosts = result.data.projects.edges
+  const projectPosts = result.data.projects.nodes
 
-  projectPosts.forEach((edge, index) => {
-    const next = index === 0 ? null : projectPosts[index - 1].node
-    const prev = index === projectPosts.length - 1 ? null : projectPosts[index + 1].node
+  projectPosts.forEach((n, index) => {
+    const next = index === 0 ? null : projectPosts[index - 1]
+    const prev = index === projectPosts.length - 1 ? null : projectPosts[index + 1]
 
     createPage({
-      path: edge.node.fields.slug,
+      path: n.fields.slug,
       component: projectTemplate,
       context: {
-        slug: edge.node.fields.slug,
+        slug: n.fields.slug,
         // Pass the current directory of the project as regex in context so that the GraphQL query can filter by it
-        absolutePathRegex: `/^${path.dirname(edge.node.fileAbsolutePath)}/`,
+        absolutePathRegex: `/^${path.dirname(n.fileAbsolutePath)}/`,
         prev,
         next,
       },
