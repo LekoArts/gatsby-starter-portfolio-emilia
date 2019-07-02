@@ -36,7 +36,7 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
         date={project.date}
         title={project.title}
         areas={project.areas}
-        text={postNode.code.body}
+        text={postNode.body}
       />
       <BG>
         <OuterWrapper>
@@ -97,9 +97,7 @@ export const pageQuery = graphql`
       }
     }
     project: mdx(fields: { slug: { eq: $slug } }) {
-      code {
-        body
-      }
+      body
       excerpt
       parent {
         ... on File {
