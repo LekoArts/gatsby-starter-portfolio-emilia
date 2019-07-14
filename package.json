@@ -38,7 +38,7 @@
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-source-filesystem": "^2.1.2",
     "gatsby-transformer-sharp": "^2.2.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.14",
     "polished": "^3.4.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
