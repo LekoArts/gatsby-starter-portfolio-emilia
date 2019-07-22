@@ -47,8 +47,8 @@
     "react-spring": "^8.0.27",
     "styled-components": "^4.3.2",
     "styled-theming": "^2.2.0",
-    "typeface-fira-sans": "^0.0.54",
-    "typeface-montserrat": "^0.0.54"
+    "typeface-fira-sans": "^0.0.75",
+    "typeface-montserrat": "^0.0.75"
   },
   "devDependencies": {
     "@testing-library/cypress": "^4.0.4",
