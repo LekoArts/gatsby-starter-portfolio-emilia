@@ -20,8 +20,8 @@
     "test:e2e:ci": "cross-env CYPRESS_SUPPORT=y start-server-and-test develop http://localhost:8000 cy:run:ci"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.1.0",
-    "@mdx-js/react": "^1.0.27",
+    "@mdx-js/mdx": "^1.1.5",
+    "@mdx-js/react": "^1.1.5",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.50",
     "gatsby-image": "^2.2.8",
