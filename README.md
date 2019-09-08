@@ -1,173 +1,126 @@
-![](https://i.imgur.com/xPj0ICn.png)
+<p align="center">
+  <a href="https://emilia.lekoarts.de">
+    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby Starter Portfolio: Emilia
+</h1>
 
-# Gatsby Starter Portfolio: Emilia
+<p align="center">
+  <a href="https://github.com/LekoArts/gatsby-starter-portfolio-emilia/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Gatsby Starter Portfolio: Emilia is released under the MIT license." />
+  </a>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
+    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+  </a>
+  <a href="https://app.netlify.com/sites/portfolio-emilia/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/5da7d9e1-9b91-44c5-b23d-b47cab98c50d/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
 
-A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience are designers and photographers.
+Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Using the Gatsby Theme [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia).
 
-[Demo Website](https://emilia.lekoarts.de)
+[**Demo Website**](https://emilia.lekoarts.de)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-portfolio-emilia) [![Edit gatsby-starter-portfolio-emilia](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/LekoArts/gatsby-starter-portfolio-emilia/tree/master/)
+Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
-[![CircleCI](https://circleci.com/gh/LekoArts/gatsby-starter-portfolio-emilia.svg?style=svg)](https://circleci.com/gh/LekoArts/gatsby-starter-portfolio-emilia) [![Netlify Status](https://api.netlify.com/api/v1/badges/5da7d9e1-9b91-44c5-b23d-b47cab98c50d/deploy-status)](https://app.netlify.com/sites/portfolio-emilia/deploys)
+## ✨ Features
 
-- Focus on big images
-- Dark theme
-- Image grid powered by CSS Grid
-- Page Transitions & Animations
-
-## Why?
-
-If you want to quickly bootstrap a design/photography portfolio or use it as a foundation for your personal site the _gatsby-starter-portfolio_ are a perfect fit for you! The project's goal is to offer minimalistic and fast websites.
-
-I hope you like my starters and create something awesome! To see some of my work you can visit my [website](https://www.lekoarts.de) or support me on [Patreon](https://www.patreon.com/lekoarts) to get some neat rewards (4K images, project files, tutorial insights). Every pledge on Patreon helps me creating more free starters!
-
-Also check out the other _gatsby-starter-portfolio_:
-
-- [gatsby-starter-portfolio-emma](https://github.com/LekoArts/gatsby-starter-portfolio-emma)
-- [gatsby-starter-portfolio-bella](https://github.com/LekoArts/gatsby-starter-portfolio-bella)
-- [gatsby-starter-portfolio-cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
-- [gatsby-starter-portfolio-jodie](https://github.com/LekoArts/gatsby-starter-portfolio-jodie)
-
-Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfolio.netlify.com/)!
-
-## Features
-
-- Configurable
-  - Use the site.js to easily change the most important information
-  - Use the theme.js to configure your CSS
-- Projects in MDX ([gatsby-mdx](https://github.com/ChristopherBiscardi/gatsby-mdx))
-- Image Grid with CSS Grid
-- Page transitions & animations with [`react-spring`](https://github.com/react-spring/react-spring)
-- [HeroPatterns](http://www.heropatterns.com/) Header
-- Styled Components
-- Cypress for End-to-End testing
+- MDX
+- Fully customizable through the usage of Gatsby Themes (and Theme UI)
+- Light Mode / Dark Mode
+- Page Transitions
+- Masonry grid and focus on big images
 - Google Analytics Support
-- SEO
-  - Sitemap
-  - Schema.org JSONLD
-  - OpenGraph Tags
-  - Twitter Tags
-- Offline Support
-- WebApp Manifest Support
-- Responsive images
-  - The right image size for every screen size
-  - Image Lazy-Loading
-  - WebP Support
+- SEO (Sitemap, OpenGraph tags, Twitter tags)
+- Offline Support & WebApp Manifest
 
-## Getting Started
+## 🚀 Getting Started
 
-Check your development environment! You'll need [Node.js](https://nodejs.org/en/), the [Gatsby CLI](https://www.gatsbyjs.org/docs/) and [node-gyp](https://github.com/nodejs/node-gyp#installation) installed. The official Gatsby website also lists two articles regarding this topic:
+1. **Create a Gatsby site.**
 
-- [Gatsby on Windows](https://www.gatsbyjs.org/docs/gatsby-on-windows/)
-- [Check your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)
+Use the Gatsby CLI to create a new site, specifying this project
 
-To copy and install this starter run this command (with "project-name" being the name of your folder you wish to install it in):
-
-```
+```sh
 gatsby new project-name https://github.com/LekoArts/gatsby-starter-portfolio-emilia
-cd project-name
-npm run dev
 ```
+
+2. **Start developing.**
+
+Navigate into your new site's directory and start it up.
+
+```sh
+cd project-name
+gatsby develop
+```
+
+3. **Open the code and start customizing!**
+
+Your site is now running at `http://localhost:8000`!
+
+If you want to learn more about how you can use a Gatsby starter that is configured with a Gatsby theme, you can checkout this [shorter](https://www.gatsbyjs.org/docs/themes/using-a-gatsby-theme/) or [longer](https://www.gatsbyjs.org/tutorial/using-a-theme/) tutorial. The tutorials don't exactly apply to this starter however the concepts are the same.
+
+## 📝 Using and modifying this starter
+
+**Important Note:** Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the underlying theme!
+
+This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia).
+
+Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emilia/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
 
 ### Adding a new project
 
-- Create a new folder in `content/projects`
-- Create a new MDX file, add the frontmatter (use the same date format)
-- **Optional:** Add text under the frontmatter (will be placed before the images)
-- Add your images in the folder (they will automatically be placed in the document). **Format:** JPG/PNG/TIF/WEBP
+New projects will be shown on the index page of this theme and can be added by creating MDX files inside `content/projects`. General setup:
 
-If you're still unsure have a look at the already existing examples.
+1. Create a new folder inside `content/projects`
+1. Create a new `index.mdx` file, and add the frontmatter
+1. Add images to the created folder (from step 1)
+1. Reference your desired images as your `cover` in the frontmatter
+1. Write your content below the frontmatter (optional)
 
-### Adding new features/plugins
+**Frontmatter reference:**
 
-You can add other features by having a look at the official [plugins page](https://www.gatsbyjs.org/docs/plugins/)
-
-### Building your site
-
-```
-npm run build
-```
-
-Copy the content of the `public` folder to your webhost or use a website like Netlify which automates that for you.
-
-## Configuration
-
-You can configure your setup in `config/site.js`:
-
-```JS
-module.exports = {
-  pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
-
-  siteTitle: 'Emilia', // Navigation and Site Title
-  siteTitleAlt: 'Emilia - Gatsby Starter Portfolio', // Alternative Site title for SEO
-  siteTitleShort: 'Emilia', // short_name for manifest
-  siteHeadline: 'Publishing & Creating stunning photos', // Headline for schema.org JSONLD
-  siteUrl: 'https://emilia.lekoarts.de', // Domain of your site. No trailing slash!
-  siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logos/logo.png', // Used for SEO and manifest
-  siteDescription: 'Dark One-Page portfolio with cards & detailed project views',
-  author: 'LekoArts', // Author for schema.org JSONLD
-
-  // siteFBAppID: '123456789', // Facebook App ID - Optional
-  userTwitter: '@emilia', // Twitter Username
-  ogSiteName: 'emilia', // Facebook Site Name
-  ogLanguage: 'en_US', // og:language
-  googleAnalyticsID: 'UA-12345689-1',
-
-  // Manifest and Progress color
-  themeColor: '#3498DB',
-  backgroundColor: '#2b2e3c',
-
-  // Your information
-  avatar: '/logos/lekoarts.png',
-  name: 'LekoArts',
-  location: 'Germany',
-  socialMedia: [
-    {
-      url: 'https://twitter.com/lekoarts_de',
-      name: 'Twitter',
-    },
-    {
-      url: 'https://www.instagram.com/lekoarts.de',
-      name: 'Instagram',
-    },
-    {
-      url: 'https://www.lekoarts.de/en',
-      name: 'Homepage',
-    },
-  ],
-}
+```md
+---
+cover: "./sean-foley-0JD7kvxAq0Y-unsplash.jpg"
+date: "2019-09-10"
+title: "Emilia"
+areas:
+  - Neon
+  - Lights
+---
 ```
 
-You can also configure the styling by editing the `config/theme.js` file:
+The frontmatter alone is enough, if you'd like to add additional content you can do so by writing your content (as usual with MDX) below the frontmatter. It'll be displayed in the header of the project below the date and areas.
 
-```JS
-// You can grab your own pattern here:
-// http://www.heropatterns.com/
+### Change your `static` folder
 
-module.exports = {
-  bgPattern: `data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2316191f' fill-opacity='0.8'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E`,
-  colors: {
-    bg: '#16191f',
-    color: 'white',
-    dark_bg: 'black',
-    secondary: '#b6b6b6',
-    link: '#328bff',
-    linkHover: '#79a8ff',
-  },
-  maxWidths: {
-    general: '1600px',
-    project: 1600,
-  },
-  gridColumns: 2, // Number of columns of the grid on the index page
-  contentPadding: '1.0875rem',
-  breakpoints: {
-    xs: '400px',
-    s: '600px',
-    m: '900px',
-    l: '1200px',
-  },
-}
-```
+The `static` folder contains the icons, social media images and robots.txt. Don't forget to change these files, too!
 
-**Attention:** You also need to edit `static/robots.txt` to include your domain!
+## 🤔 Questions or problems?
+
+Please open up an issue on the main repository: [LekoArts/gatsby-themes](https://github.com/LekoArts/gatsby-themes). Thanks!
+
+## 🎓 Learning Gatsby
+
+Looking for more guidance? Full documentation for Gatsby lives [on Gatsby's website](https://www.gatsbyjs.org/).
+
+### Themes
+
+- To learn more about Gatsby themes specifically, we recommend checking out the [theme docs](https://www.gatsbyjs.org/docs/themes/).
+
+### General
+
+- **For most developers, I recommend starting with the [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+
+- **To dive straight into code samples, head [to Gatsby's documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Reference Guides_ and _Gatsby API_ sections in the sidebar.
+
+## 🌟 Supporting me
+
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts)!
+
+If you want to hire me for **contract/freelance work**, you can do so! [Get in touch with me!](https://www.lekoarts.de/en/contact)
