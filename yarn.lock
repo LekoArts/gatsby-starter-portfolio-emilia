@@ -946,9 +946,9 @@
   integrity sha512-1dVNHT76Uu5N3eJNTYcvxee+jzX4Z9lfciqRRHCU27ihbUcYi+iSc2iml5Ke1LXe1SyJCLA0+14Jh4tXJgOppA==
 
 "@hapi/hoek@8.x.x":
-  version "8.2.2"
-  resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-8.2.2.tgz#6eaa2e1ec3b50dfb8dccbe705dc289094652bc2d"
-  integrity sha512-18P3VwngjNEcmvPj1mmiHLPyUPjhPAxIyJKDj4PRIY0F5ac3P0Vd0hkASPyWXHK0rfY3P9N2FoxV8ZuYaRBZ1g==
+  version "8.2.3"
+  resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-8.2.3.tgz#7ffcb10d9609be5eeb96521b62941653da264b28"
+  integrity sha512-rvgNiuJU19K/YmVJ4nvDPstqs2C7NSA1+ApAFgTSVvfGahzlwRqu0S0dnyWEDhEvgO40E5phUyZi/MZ6vEUKcQ==
 
 "@hapi/joi@^15.0.0", "@hapi/joi@^15.1.1":
   version "15.1.1"
@@ -1233,10 +1233,10 @@
     gatsby-transformer-sharp "^2.2.13"
     lodash.kebabcase "^4.1.1"
 
-"@lekoarts/gatsby-theme-emilia@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia/-/gatsby-theme-emilia-1.0.1.tgz#3a1ccca7a4bd7d560d8cd94703188c071029e7c1"
-  integrity sha512-/hIiD6Pp2O7epb4l8/pGmnDpSXDLl3ehpDGD+LcbJcUtzTrzmVDxAhizSy75ZmI536IseFC356h0NFgZdVOwbQ==
+"@lekoarts/gatsby-theme-emilia@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia/-/gatsby-theme-emilia-1.0.2.tgz#72486901bbeb611aeaf1800c6f6298963bff932b"
+  integrity sha512-o1mcquy+0X7+yny+CnvNYveb0LA8BjqBNR3fkLFXtsmLnnB9cJYkM6fL2WYzMItetpUWQ6dNbAR6f/djld1/VA==
   dependencies:
     "@emotion/core" "^10.0.17"
     "@lekoarts/gatsby-theme-emilia-core" "^1.0.1"
@@ -1251,7 +1251,6 @@
     gatsby-plugin-typescript "^2.1.2"
     react-helmet "^5.2.1"
     react-spring "^8.0.27"
-    resize-observer-polyfill "^1.5.1"
     theme-ui "^0.2.38"
 
 "@mdx-js/mdx@^1.4.0":
@@ -11104,11 +11103,6 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
-
-resize-observer-polyfill@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
-  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
