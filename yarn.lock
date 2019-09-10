@@ -1213,7 +1213,7 @@
     gatsby-transformer-sharp "^2.2.13"
     lodash.kebabcase "^4.1.1"
 
-"@lekoarts/gatsby-theme-emilia@^1.0.4":
+"@lekoarts/gatsby-theme-emilia@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia/-/gatsby-theme-emilia-1.0.5.tgz#57e40c2388ee9dc04c70f23a075df268df2b7be7"
   integrity sha512-f/V/tjzvM/EVZJeGeSK3H0Qcm1oLnY3OUBzx515XtxPotOVi24oFwU5Heh9FV9dMNwFbDFGJq9paatK7P9JvKQ==
