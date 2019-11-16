@@ -1270,10 +1270,10 @@
     gatsby-transformer-sharp "^2.3.3"
     lodash.kebabcase "^4.1.1"
 
-"@lekoarts/gatsby-theme-emilia@^1.0.12":
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia/-/gatsby-theme-emilia-1.0.12.tgz#4dcafdabab9f1c06766848be02e9e91daadac64f"
-  integrity sha512-ZttwhrH8tYAR3S2bwd47r6tH2yyqc9gjAIulEib6+BpWvg7jsLDWReYb5aGfcIHmyq+dT9ZTTcaSmEIkqQhbFw==
+"@lekoarts/gatsby-theme-emilia@^1.0.13":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia/-/gatsby-theme-emilia-1.0.13.tgz#d653dcc31cc7654064a2a4d9f840c6a98a10c5a4"
+  integrity sha512-PqSoQUXcEbjDGiDArxG5PoMrP+l4CkRTaGpNVZDiUUU4ihRiJytjQEqwb5oLPnp8DW12O475O1FALaZjjc5/kw==
   dependencies:
     "@emotion/core" "^10.0.22"
     "@lekoarts/gatsby-theme-emilia-core" "^1.0.10"
