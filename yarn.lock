@@ -1305,10 +1305,10 @@
     gatsby-transformer-sharp "^2.3.13"
     lodash.kebabcase "^4.1.1"
 
-"@lekoarts/gatsby-theme-emilia@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia/-/gatsby-theme-emilia-1.1.2.tgz#a8f6e90c884306f1d2f672e9face78fd4e6bdda4"
-  integrity sha512-Q6x5W9InZlf/S+0M08CdKOV7oNxhZ2KlDIzF4YomgGBryFkvjF7ASDooNdo2nOmpa9MwWN6MQCS0tfes9UXWTg==
+"@lekoarts/gatsby-theme-emilia@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia/-/gatsby-theme-emilia-1.1.3.tgz#5370da85658258a014392d4e91e34f45a66e1233"
+  integrity sha512-M4SAFyr4jJlBh8K9Wwa7bbdrmh+lBQ/KQJQj/DEfAaIOsdtixVMKu4M7iHQY0tgpRxIpL9T+UwriQpzarSoIsQ==
   dependencies:
     "@emotion/core" "^10.0.27"
     "@lekoarts/gatsby-theme-emilia-core" "^1.1.2"
@@ -6048,9 +6048,9 @@ gatsby-transformer-sharp@^2.3.13:
     sharp "^0.23.4"
 
 gatsby@^2.15.2:
-  version "2.19.2"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.19.2.tgz#ef5fa07b608858827c5fb535b75b1ecb5b0d0832"
-  integrity sha512-zydZ8BrJrfckjTcevnnuNBJRg8yLcg47uBb9fmzYMz7RWg9Xp0GW/5M3kDr1+cssS6xT8JyN0IaiSHMxszlhSQ==
+  version "2.19.3"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.19.3.tgz#16b7e0f1067a05b12f52d5899cef14473cb02b81"
+  integrity sha512-jnJ4t3iejcoB+bujV55O1m5uiq19EF/Jq9cWO+M0OSbbPRl3qplDQCbKzhSOXXcoTb7k0jxPMdUOqQ53rX9vpA==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.7.5"
