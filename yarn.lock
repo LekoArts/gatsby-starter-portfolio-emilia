@@ -927,9 +927,9 @@
   integrity sha512-fxfMSBMX3tlIbKUdtGKxqB1fyrH6gVrX39Gsv3y8lRYKUqlgDt3UMqQyGnR1bQMa2B8aGnhLZokZgg8vT0Le+A==
 
 "@emotion/is-prop-valid@^0.8.1":
-  version "0.8.6"
-  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.6.tgz#4757646f0a58e9dec614c47c838e7147d88c263c"
-  integrity sha512-mnZMho3Sq8BfzkYYRVc8ilQTnc8U02Ytp6J1AwM6taQStZ3AhsEJBX2LzhA/LJirNCwM2VtHL3VFIZ+sNJUgUQ==
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.7.tgz#803449993f436f9a6c67752251ea3fc492a1044c"
+  integrity sha512-OPkKzUeiid0vEKjZqnGcy2mzxjIlCffin+L2C02pdz/bVlt5zZZE2VzO0D3XOPnH0NEeF21QNKSXiZphjr4xiQ==
   dependencies:
     "@emotion/memoize" "0.7.4"
 
@@ -1258,10 +1258,10 @@
   dependencies:
     core-js "^2.5.7"
 
-"@lekoarts/gatsby-theme-emilia-core@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia-core/-/gatsby-theme-emilia-core-1.1.4.tgz#79ffafb338a109237c18b94a70fb5e8bb608ff58"
-  integrity sha512-vVkb+kd1oRM2CcnAkQDQhTzNYv9MQ3r1U03YE7h0YqBL+25pIe1XuCOIhnBeRCvpyCspZxI3rL28pYYXV1IlXg==
+"@lekoarts/gatsby-theme-emilia-core@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia-core/-/gatsby-theme-emilia-core-1.2.0.tgz#4ce63ffe11a0c056d56ee07258aeef7b7392df16"
+  integrity sha512-U03tutZa0xKv0Jm+jyLAGa1BsRspvNtJjgX9u5oiKMMPq6+Lz2rGyM+0brBMeEUdexxNy3mjExyAZNiOXMBDNw==
   dependencies:
     "@mdx-js/mdx" "^1.5.7"
     "@mdx-js/react" "^1.5.7"
@@ -1273,12 +1273,12 @@
     lodash.kebabcase "^4.1.1"
 
 "@lekoarts/gatsby-theme-emilia@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia/-/gatsby-theme-emilia-1.1.5.tgz#b6ec09b579c142a9a93e2bb1c6cdc15a43fc70c2"
-  integrity sha512-mCf0K4DzD3wAd2Fg8P1ULH+tGafU/mk/eaoyCk1Zb4gcKU4WIr2j2gVAfVw1ZRqpt0chP/3+4E1AwjjSxLr+YA==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia/-/gatsby-theme-emilia-1.2.0.tgz#0dcf2d5ee04c464729ce7be324603ece52ff91c6"
+  integrity sha512-zDaNpSYjMzD8Q+x+B8uBNBRK/SmweG1yPF8otkBensXkulAeg/fW0prRZtJI+adloD9ivtNWg8YEtNaLTU0TBg==
   dependencies:
     "@emotion/core" "^10.0.27"
-    "@lekoarts/gatsby-theme-emilia-core" "^1.1.4"
+    "@lekoarts/gatsby-theme-emilia-core" "^1.2.0"
     "@mdx-js/react" "^1.5.7"
     "@theme-ui/presets" "^0.2.44"
     colorthief "^2.3.0"
@@ -12772,9 +12772,9 @@ ts-pnp@^1.1.6:
   integrity sha512-CrG5GqAAzMT7144Cl+UIFP7mz/iIhiy+xQ6GGcnjTezhALT02uPMRw7tgDSESgB5MsfKt55+GPWw4ir1kVtMIQ==
 
 tslib@^1.6.0, tslib@^1.8.1, tslib@^1.9.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.0.tgz#f1f3528301621a53220d58373ae510ff747a66bc"
-  integrity sha512-BmndXUtiTn/VDDrJzQE7Mm22Ix3PxgLltW9bSNLoeCY31gnG2OPx0QqJnuc9oMIKioYrz487i6K9o4Pdn0j+Kg==
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
+  integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
 
 tsutils@^3.17.1:
   version "3.17.1"
