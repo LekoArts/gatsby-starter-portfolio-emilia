@@ -1379,34 +1379,34 @@
     "@babel/runtime" "^7.7.2"
     core-js "^3.4.1"
 
-"@lekoarts/gatsby-theme-emilia-core@^1.2.4":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia-core/-/gatsby-theme-emilia-core-1.2.4.tgz#a507145bd7d597ae8cc85d6763dae523e9655872"
-  integrity sha512-axl81848aUdQgiribW5FOlviccMuYKyalhD2h1KePCMc88LOLv36KMLe+4dFJdiSc2iikqv9V5Yuk7DUUdG6WA==
+"@lekoarts/gatsby-theme-emilia-core@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia-core/-/gatsby-theme-emilia-core-1.2.5.tgz#b44cac39e106845f10585464cd971c543c6eae47"
+  integrity sha512-u7D9ytorBuTyITRQKBrlpKGSe7N7RFmkNbsF8h8dic1zM7NfvXABgjN8xQUf1EbYrjQx8HV7qOCYSmJZ4eoqlQ==
   dependencies:
     "@mdx-js/mdx" "^1.5.8"
     "@mdx-js/react" "^1.5.8"
-    gatsby-plugin-mdx "^1.1.4"
+    gatsby-plugin-mdx "^1.1.7"
     gatsby-plugin-sharp "^2.5.4"
     gatsby-plugin-typescript "^2.3.1"
     gatsby-source-filesystem "^2.2.2"
     gatsby-transformer-sharp "^2.4.4"
     lodash.kebabcase "^4.1.1"
 
-"@lekoarts/gatsby-theme-emilia@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia/-/gatsby-theme-emilia-1.2.5.tgz#3170e483864f3418c70b405ba890c1dce00638ac"
-  integrity sha512-HByJsGYXQ4CSeQkdU/XHn1AxpaCXv4qef8Sf/s33WW47UndMMT1V/I4lKWbDAu65CE4cnDF2AR7KIaWtKKZuPg==
+"@lekoarts/gatsby-theme-emilia@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@lekoarts/gatsby-theme-emilia/-/gatsby-theme-emilia-1.2.6.tgz#7469725789746147cfd7ee7e0accf76546ea0ff3"
+  integrity sha512-RRrzYcj/O2SFBDUIf9JvJwqHC+fIy/EHs2OOOJTfV56ztHIfD5qPynTKKlhWW97gv3R8238idtkdn2qYI0eaKA==
   dependencies:
     "@emotion/core" "^10.0.28"
-    "@lekoarts/gatsby-theme-emilia-core" "^1.2.4"
+    "@lekoarts/gatsby-theme-emilia-core" "^1.2.5"
     "@mdx-js/react" "^1.5.8"
     "@theme-ui/presets" "^0.2.44"
     colorthief "^2.3.0"
     gatsby-core-utils "^1.1.1"
-    gatsby-image "^2.3.1"
+    gatsby-image "^2.3.2"
     gatsby-plugin-emotion "^4.2.1"
-    gatsby-plugin-react-helmet "^3.2.1"
+    gatsby-plugin-react-helmet "^3.2.2"
     gatsby-plugin-theme-ui "^0.2.53"
     gatsby-plugin-typescript "^2.3.1"
     react-helmet "^5.2.1"
@@ -5948,7 +5948,7 @@ gatsby-graphiql-explorer@^0.3.1:
   dependencies:
     "@babel/runtime" "^7.8.7"
 
-gatsby-image@^2.3.1:
+gatsby-image@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.3.2.tgz#12e6cac9d6cc1a8152a35693ddf7729d5e59759f"
   integrity sha512-xaFo2Bsox0aRvRXORLyYf9Rgzp/7aBR4aSmb8CuLLGs4c+IbeSlK0XofkLMZ9c52pxijVRfO3WLSVTB7dtHv+Q==
@@ -6006,7 +6006,7 @@ gatsby-plugin-manifest@^2.2.13:
     semver "^5.7.1"
     sharp "^0.25.1"
 
-gatsby-plugin-mdx@^1.1.4:
+gatsby-plugin-mdx@^1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.1.7.tgz#af94eff3f10ae2475ac0714b08f3e97d0fc77b0f"
   integrity sha512-CTEeZQQ/hYDPv9mX06259zwiQc67OGBPzigBL8ZEMSgg5ANzzfR143Wd74RGPvT04GnMNjfWKcg8yBPTf75EaA==
@@ -6084,7 +6084,7 @@ gatsby-plugin-page-creator@^2.2.1:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-react-helmet@^3.2.1:
+gatsby-plugin-react-helmet@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.2.2.tgz#8817da61cd57b8fd9cf1cc6fb55c1e9564aa6a3c"
   integrity sha512-mPd7gefGIxqAuxFJgDuttR9+DnRLKLrCh61ND1iLSeOp9GoYS/qH8Rhka6fkpmBXOtUVyujzaUthhB/ll/a4RA==
