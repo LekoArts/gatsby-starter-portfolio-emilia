@@ -15,9 +15,8 @@ const NotFound = () => (
         <br />
         You found a page that doesn't exist.{` `}
         <TLink as={Link} to="/">
-          To you want to visit the homepage?
+          Do you want to visit the homepage?
         </TLink>
-        .
       </Themed.p>
     </Container>
   </Layout>
