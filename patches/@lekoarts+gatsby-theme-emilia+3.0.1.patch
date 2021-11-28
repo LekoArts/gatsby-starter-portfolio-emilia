@@ -1,0 +1,98 @@
+diff --git a/node_modules/@lekoarts/gatsby-theme-emilia/.DS_Store b/node_modules/@lekoarts/gatsby-theme-emilia/.DS_Store
+new file mode 100644
+index 0000000..9a874b5
+Binary files /dev/null and b/node_modules/@lekoarts/gatsby-theme-emilia/.DS_Store differ
+diff --git a/node_modules/@lekoarts/gatsby-theme-emilia/src/.DS_Store b/node_modules/@lekoarts/gatsby-theme-emilia/src/.DS_Store
+new file mode 100644
+index 0000000..c73617a
+Binary files /dev/null and b/node_modules/@lekoarts/gatsby-theme-emilia/src/.DS_Store differ
+diff --git a/node_modules/@lekoarts/gatsby-theme-emilia/src/@lekoarts/.DS_Store b/node_modules/@lekoarts/gatsby-theme-emilia/src/@lekoarts/.DS_Store
+new file mode 100644
+index 0000000..b1f02aa
+Binary files /dev/null and b/node_modules/@lekoarts/gatsby-theme-emilia/src/@lekoarts/.DS_Store differ
+diff --git a/node_modules/@lekoarts/gatsby-theme-emilia/src/@lekoarts/gatsby-theme-emilia-core/.DS_Store b/node_modules/@lekoarts/gatsby-theme-emilia/src/@lekoarts/gatsby-theme-emilia-core/.DS_Store
+new file mode 100644
+index 0000000..7ceb314
+Binary files /dev/null and b/node_modules/@lekoarts/gatsby-theme-emilia/src/@lekoarts/gatsby-theme-emilia-core/.DS_Store differ
+diff --git a/node_modules/@lekoarts/gatsby-theme-emilia/src/components/footer.tsx b/node_modules/@lekoarts/gatsby-theme-emilia/src/components/footer.tsx
+index 5c2af52..fdf209a 100755
+--- a/node_modules/@lekoarts/gatsby-theme-emilia/src/components/footer.tsx
++++ b/node_modules/@lekoarts/gatsby-theme-emilia/src/components/footer.tsx
+@@ -53,45 +53,6 @@ const Footer = () => {
+           </Flex>
+         </div>
+       </Container>
+-      {showThemeAuthor && (
+-        <Container
+-          sx={{
+-            display: `flex`,
+-            justifyContent: `center`,
+-            alignItems: `center`,
+-            color: `text`,
+-            fontWeight: `semibold`,
+-            a: { color: `text` },
+-            mt: 4,
+-          }}
+-        >
+-          {isDark ? (
+-            <img
+-              width="30"
+-              height="30"
+-              src="https://img.lekoarts.de/gatsby/logo_v2-light_w30.png"
+-              alt="LekoArts Logo"
+-            />
+-          ) : (
+-            <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_v2_w30.png" alt="LekoArts Logo" />
+-          )}
+-          {` `}
+-          <Link
+-            aria-label="Link to the theme's GitHub repository"
+-            sx={{ ml: 2 }}
+-            href="https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-emilia"
+-          >
+-            Theme
+-          </Link>
+-          <div sx={{ mx: 1 }}>by</div>
+-          {` `}
+-          <Link
+-            aria-label="Link to the theme author's website"
+-            href="https://www.lekoarts.de?utm_source=emilia&utm_medium=Theme"
+-          >
+-            LekoArts
+-          </Link>
+-        </Container>
+       )}
+     </Box>
+   )
+diff --git a/node_modules/@lekoarts/gatsby-theme-emilia/src/components/header-background.tsx b/node_modules/@lekoarts/gatsby-theme-emilia/src/components/header-background.tsx
+index 30ed73b..4629b9e 100755
+--- a/node_modules/@lekoarts/gatsby-theme-emilia/src/components/header-background.tsx
++++ b/node_modules/@lekoarts/gatsby-theme-emilia/src/components/header-background.tsx
+@@ -34,9 +34,7 @@ const HeaderBackground = () => {
+           left: 0,
+           right: 0,
+           bottom: 0,
+-          background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 34.99%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, ${
+-            isDark ? `0.35` : `0.15`
+-          }) 100%)`,
++          background: `linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, ${isDark ? `0.35` : `0.15`}) 100%)`,
+         }}
+       />
+     </React.Fragment>
+diff --git a/node_modules/@lekoarts/gatsby-theme-emilia/src/components/seo.tsx b/node_modules/@lekoarts/gatsby-theme-emilia/src/components/seo.tsx
+index df7e8df..9caf420 100755
+--- a/node_modules/@lekoarts/gatsby-theme-emilia/src/components/seo.tsx
++++ b/node_modules/@lekoarts/gatsby-theme-emilia/src/components/seo.tsx
+@@ -49,9 +49,9 @@ const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children
+       <meta name="twitter:image:alt" content={seo.description} />
+       <meta name="twitter:creator" content={author} />
+       <meta name="gatsby-theme" content="@lekoarts/gatsby-theme-emilia" />
+-      <link rel="icon" type="image/png" sizes="32x32" href={withPrefix(`/favicon-32x32.png`)} />
+-      <link rel="icon" type="image/png" sizes="16x16" href={withPrefix(`/favicon-16x16.png`)} />
+-      <link rel="apple-touch-icon" sizes="180x180" href={withPrefix(`/apple-touch-icon.png`)} />
++      <link rel="icon" type="image/png" sizes="32x32" href={withPrefix(`/inu-favicon-32x32.png`)} />
++      <link rel="icon" type="image/png" sizes="16x16" href={withPrefix(`/inu-favicon-16x16.png`)} />
++      <link rel="apple-touch-icon" sizes="180x180" href={withPrefix(`/penguin-apple-touch-icon.png`)} />
+       {children}
+     </Helmet>
+   )

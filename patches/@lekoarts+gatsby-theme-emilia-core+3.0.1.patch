@@ -1,0 +1,55 @@
+diff --git a/node_modules/@lekoarts/gatsby-theme-emilia-core/.DS_Store b/node_modules/@lekoarts/gatsby-theme-emilia-core/.DS_Store
+new file mode 100644
+index 0000000..58dace1
+Binary files /dev/null and b/node_modules/@lekoarts/gatsby-theme-emilia-core/.DS_Store differ
+diff --git a/node_modules/@lekoarts/gatsby-theme-emilia-core/gatsby-config.js b/node_modules/@lekoarts/gatsby-theme-emilia-core/gatsby-config.js
+index bd4ab81..75790f1 100755
+--- a/node_modules/@lekoarts/gatsby-theme-emilia-core/gatsby-config.js
++++ b/node_modules/@lekoarts/gatsby-theme-emilia-core/gatsby-config.js
+@@ -5,14 +5,14 @@ module.exports = (themeOptions) => {
+ 
+   return {
+     siteMetadata: {
+-      siteTitle: `Emilia`,
+-      siteTitleAlt: `Emilia - @lekoarts/gatsby-theme-emilia-core`,
+-      siteHeadline: `Emilia - Gatsby Theme from @lekoarts`,
+-      siteUrl: `https://emilia.lekoarts.de`,
+-      siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
++      siteTitle: `Naoto Nishida`,
++      siteTitleAlt: `Naoto Nishida | 西田 直人`,
++      siteHeadline: `Naoto Nishida's portfolio site`,
++      siteUrl: `https://nawta.github.io`,
++      siteDescription: `ポートフォリオのサイトです`,
+       siteLanguage: `en`,
+-      siteImage: `/banner.jpg`,
+-      author: `@lekoarts_de`,
++      siteImage: `/wanko_banner.jpg`,
++      author: `Naoto Nishida`,
+       basePath: options.basePath,
+       projectsPath: options.projectsPath,
+     },
+diff --git a/node_modules/@lekoarts/gatsby-theme-emilia-core/gatsby-node.js b/node_modules/@lekoarts/gatsby-theme-emilia-core/gatsby-node.js
+index f9e42e7..5fc500f 100755
+--- a/node_modules/@lekoarts/gatsby-theme-emilia-core/gatsby-node.js
++++ b/node_modules/@lekoarts/gatsby-theme-emilia-core/gatsby-node.js
+@@ -149,11 +149,12 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
+ exports.sourceNodes = (
+   { actions, createContentDigest },
+   {
+-    name = `LekoArts`,
+-    location = `Germany`,
++    name = `Naoto Nishida | 西田 直人`,
++    location = `Japan`,
+     socialMedia = [
+-      { title: `Twitter`, href: `https://twitter.com/lekoarts_de` },
+-      { title: `Homepage`, href: `https://www.lekoarts.de?utm_source=emilia&utm_medium=Theme` },
++      { title: `Twitter`, href: `https://twitter.com/cvadogsan` },
++      { title: `Instagram`, href:`https://www.instagram.com/nawtaaa/` },
++      { title: `CV`, href:`hogehoge` },
+     ],
+     showThemeAuthor = true,
+     assetsPath = `content/assets`,
+diff --git a/node_modules/@lekoarts/gatsby-theme-emilia-core/src/.DS_Store b/node_modules/@lekoarts/gatsby-theme-emilia-core/src/.DS_Store
+new file mode 100644
+index 0000000..4138c7c
+Binary files /dev/null and b/node_modules/@lekoarts/gatsby-theme-emilia-core/src/.DS_Store differ
