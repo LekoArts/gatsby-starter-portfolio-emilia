@@ -1,9 +1,3 @@
-# Tips
-- moduleがないと言われたらnpm rebuildとか
-- サイト更新時はnpm, nodeをこまめにアップデートしておこう
-- content/projects：ここのディレクトリが記事になる．coverはnon-nullableなので何かしら画像用意せなあかん
-
-
 <p align="center">
   <a href="https://emilia.lekoarts.de">
     <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
