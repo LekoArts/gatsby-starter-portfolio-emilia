@@ -6,7 +6,7 @@
 - ホットリロードしつつデバッグする時はnpm run develop or gatsby develop
 - gatsby buildしたらいい感じに反映されるっぽい？
 - 反映されんかったらブラウザのキャッシュとか消してみる
-
+- patch-packageを入れた．ので，'npx patch-package @lekoarts/gatsby-theme-emilia-core'とかnode_modules内をいじった時はパッチを作っておくように．
 
 <p align="center">
   <a href="https://emilia.lekoarts.de">
