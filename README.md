@@ -7,6 +7,7 @@
 - gatsby buildしたらいい感じに反映されるっぽい？
 - 反映されんかったらブラウザのキャッシュとか消してみる
 - patch-packageを入れた．ので，'npx patch-package @lekoarts/gatsby-theme-emilia-core'とかnode_modules内をいじった時はパッチを作っておくように．
+- 一応実行確認したもの．npm v8.1.4, node 17.1.0
 
 <p align="center">
   <a href="https://emilia.lekoarts.de">
