@@ -3,6 +3,10 @@
 - サイト更新時はnpm, nodeをこまめにアップデートしておこう
 - git resetを使うと，差分取ってないファイル全部消えるから気をつける．
 - content/projects：ここのディレクトリが記事になる．coverはnon-nullableなので何かしら画像用意せなあかん
+- ホットリロードしつつデバッグする時はnpm run develop or gatsby develop
+- gatsby buildしたらいい感じに反映されるっぽい？
+- 反映されんかったらブラウザのキャッシュとか消してみる
+
 
 <p align="center">
   <a href="https://emilia.lekoarts.de">
