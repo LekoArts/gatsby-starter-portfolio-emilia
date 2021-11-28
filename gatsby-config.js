@@ -7,14 +7,14 @@ module.exports = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-emilia-core/gatsby-config.js
-    siteTitle: `Emilia`,
-    siteTitleAlt: `Emilia - Gatsby Starter Portfolio`,
-    siteHeadline: `Emilia - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://emilia.lekoarts.de`,
-    siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
+    siteTitle: `Naoto Nishida`,
+    siteTitleAlt: `Naoto Nishida | 西田 直人`,
+    siteHeadline: `Naoto Nishida's portfolio site`,
+    siteUrl: `https://nawta.github.io`,
+    siteDescription: `@lekoarts/gatsby-theme-emiliaから原型を取ってきたポートフォリオサイト`,
     siteLanguage: `en`,
-    siteImage: `/banner.jpg`,
-    author: `@lekoarts_de`,
+    siteImage: `/wanko_banner.jpg`,
+    author: `Naoto Nishida`,
   },
   plugins: [
     {
@@ -37,12 +37,12 @@ module.exports = {
         display: `standalone`,
         icons: [
           {
-            src: `/android-chrome-192x192.png`,
+            src: `/neko-android-chrome-192x192.png`,
             sizes: `192x192`,
             type: `image/png`,
           },
           {
-            src: `/android-chrome-512x512.png`,
+            src: `/neko-android-chrome-512x512.png`,
             sizes: `512x512`,
             type: `image/png`,
           },
