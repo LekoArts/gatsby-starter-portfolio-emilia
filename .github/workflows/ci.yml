@@ -11,7 +11,10 @@ env:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
