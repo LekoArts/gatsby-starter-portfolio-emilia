@@ -15,10 +15,10 @@ new file mode 100644
 index 0000000..7ceb314
 Binary files /dev/null and b/node_modules/@lekoarts/gatsby-theme-emilia/src/@lekoarts/gatsby-theme-emilia-core/.DS_Store differ
 diff --git a/node_modules/@lekoarts/gatsby-theme-emilia/src/components/footer.tsx b/node_modules/@lekoarts/gatsby-theme-emilia/src/components/footer.tsx
-index 5c2af52..fdf209a 100755
+index 5c2af52..b663abc 100755
 --- a/node_modules/@lekoarts/gatsby-theme-emilia/src/components/footer.tsx
 +++ b/node_modules/@lekoarts/gatsby-theme-emilia/src/components/footer.tsx
-@@ -53,45 +53,6 @@ const Footer = () => {
+@@ -53,46 +53,6 @@ const Footer = () => {
            </Flex>
          </div>
        </Container>
@@ -61,9 +61,10 @@ index 5c2af52..fdf209a 100755
 -            LekoArts
 -          </Link>
 -        </Container>
-       )}
+-      )}
      </Box>
    )
+ }
 diff --git a/node_modules/@lekoarts/gatsby-theme-emilia/src/components/header-background.tsx b/node_modules/@lekoarts/gatsby-theme-emilia/src/components/header-background.tsx
 index 30ed73b..4629b9e 100755
 --- a/node_modules/@lekoarts/gatsby-theme-emilia/src/components/header-background.tsx
