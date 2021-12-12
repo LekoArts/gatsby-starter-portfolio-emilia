@@ -112,6 +112,30 @@ Create a file at `src/@lekoarts/gatsby-theme-emilia/texts/about-me.mdx` to edit 
 
 Place an image with the name `avatar` inside the folder `content/assets` (or your custom `assetsPath` which you defined for the theme).
 
+### Changing the location (requires change of Gatsby-config.js)
+https://www.gatsbyjs.com/plugins/@lekoarts/gatsby-theme-emilia/#example-usage
+
+Example Usage of Adding Location and Social Media: 
+// gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `@lekoarts/gatsby-theme-emilia`,
+      options: {
+          name: `Emilia`,
+          location: "Berlin",
+          socialMedia: [
+            {
+              title: `Instagram`,
+              href: `https://www.instagram.com/lekoarts.de`
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+
 ### Change your `static` folder
 
 The `static` folder contains the icons, social media images and `robots.txt`. Don't forget to change these files, too! You can use [Real Favicon Generator](https://realfavicongenerator.net/) to generate the image files inside `static`.
