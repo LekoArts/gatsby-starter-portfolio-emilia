@@ -8,21 +8,30 @@ const config: GatsbyConfig = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-emilia-core/gatsby-config.mjs
-    siteTitle: `Emilia`,
-    siteTitleAlt: `Emilia - Gatsby Starter Portfolio`,
+    siteTitle: `horsefaceFoto`,
+    siteTitleAlt: `horsefaceFoto`,
     siteHeadline: `Emilia - Gatsby Theme from @lekoarts`,
     siteUrl: `https://emilia.lekoarts.de`,
-    siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
+    siteDescription: `horsefaceFoto`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    author: `@horseface1110`,
   },
   trailingSlash: `always`,
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-emilia`,
       // See the theme's README for all available options
-      options: {},
+      options: {
+        name: `horseface`,
+        location: `Tanaka`,
+        socialMedia: [
+          {
+            title: `Instagram`,
+            href: `https://www.instagram.com/horseface_1110/`
+          }
+        ]
+      },
     },
     {
       resolve: `gatsby-plugin-sitemap`,
